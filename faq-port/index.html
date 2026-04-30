@@ -784,6 +784,50 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#php" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PHP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ruby" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ruby
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elixir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Elixir
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#rust" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -948,6 +992,50 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#php" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PHP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ruby" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ruby
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elixir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Elixir
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#rust" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -976,8 +1064,8 @@
 
 
 <h1 id="what-port-should-my-app-listen-on">What port should my app listen on?</h1>
-<p>Shoal expects your app to listen on port <strong><code>8080</code></strong>. If your framework defaults to a different port, use the reference below to change it.</p>
-<p><em>Coming soon: Shoal will detect your framework automatically so you can skip this step.</em></p>
+<p>Shoal's gateway maps your app to the outside world via port <strong><code>8080</code></strong> - so your app needs to listen on that port for traffic to reach it. If your framework defaults to something different, use the reference below to change it.</p>
+<p><em>Coming soon: Shoal will handle this mapping automatically so you won't need to configure it yourself.</em></p>
 <hr />
 <h2 id="nodejs">Node.js</h2>
 <table>
@@ -1145,6 +1233,98 @@
 <td>Minimal API</td>
 <td>5000</td>
 <td>Set env var <code>ASPNETCORE_URLS=http://+:8080</code> in container node config</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="php">PHP</h2>
+<table>
+<thead>
+<tr>
+<th>Framework</th>
+<th>Default Port</th>
+<th>How to use port 8080</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Laravel</td>
+<td>8000</td>
+<td><code>CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8080"]</code></td>
+</tr>
+<tr>
+<td>Symfony</td>
+<td>8000</td>
+<td><code>CMD ["php", "-S", "0.0.0.0:8080", "-t", "public"]</code></td>
+</tr>
+<tr>
+<td>Slim</td>
+<td>none</td>
+<td><code>$app-&gt;run()</code> uses server config - set via <code>CMD ["php", "-S", "0.0.0.0:8080"]</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="ruby">Ruby</h2>
+<table>
+<thead>
+<tr>
+<th>Framework</th>
+<th>Default Port</th>
+<th>How to use port 8080</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rails (Puma)</td>
+<td>3000</td>
+<td><code>CMD ["rails", "server", "-b", "0.0.0.0", "-p", "8080"]</code></td>
+</tr>
+<tr>
+<td>Sinatra</td>
+<td>4567</td>
+<td><code>set :port, 8080</code> and <code>set :bind, '0.0.0.0'</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="elixir">Elixir</h2>
+<table>
+<thead>
+<tr>
+<th>Framework</th>
+<th>Default Port</th>
+<th>How to use port 8080</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Phoenix</td>
+<td>4000</td>
+<td>Set env var <code>PORT=8080</code> - Phoenix reads it by default</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="kotlin">Kotlin</h2>
+<table>
+<thead>
+<tr>
+<th>Framework</th>
+<th>Default Port</th>
+<th>How to use port 8080</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ktor</td>
+<td>none</td>
+<td><code>embeddedServer(Netty, port = 8080, host = "0.0.0.0")</code></td>
+</tr>
+<tr>
+<td>Spring Boot (Kotlin)</td>
+<td>8080</td>
+<td>Already default</td>
 </tr>
 </tbody>
 </table>
