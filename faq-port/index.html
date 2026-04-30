@@ -678,6 +678,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    What Port to Use
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -694,6 +712,91 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node.js
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C#
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rust
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -783,6 +886,80 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node.js
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C#
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rust
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -799,25 +976,211 @@
 
 
 <h1 id="what-port-should-my-app-listen-on">What port should my app listen on?</h1>
-<p>Shoal expects your app to listen on port <strong><code>8080</code></strong>. Make sure your app binds to this port, and that your Dockerfile includes <code>EXPOSE 8080</code>.</p>
-<p>If your framework defaults to a different port, you can usually override it with an environment variable. For example:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Python (Flask)</label><label for="__tabbed_1_2">Node.js</label><label for="__tabbed_1_3">Go</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s2">&quot;0.0.0.0&quot;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8080</span><span class="p">)</span>
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">PORT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">PORT</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="mf">8080</span><span class="p">;</span>
-<span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="nx">PORT</span><span class="p">);</span>
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="nx">http</span><span class="p">.</span><span class="nx">ListenAndServe</span><span class="p">(</span><span class="s">&quot;:8080&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="p">)</span>
-</code></pre></div>
-</div>
-</div>
-</div>
+<p>Shoal expects your app to listen on port <strong><code>8080</code></strong>. If your framework defaults to a different port, use the reference below to change it.</p>
+<p><em>Coming soon: Shoal will detect your framework automatically so you can skip this step.</em></p>
+<hr />
+<h2 id="nodejs">Node.js</h2>
+<table>
+<thead>
+<tr>
+<th>Framework</th>
+<th>Default Port</th>
+<th>How to use port 8080</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Express</td>
+<td>3000</td>
+<td><code>app.listen(8080)</code></td>
+</tr>
+<tr>
+<td>Fastify</td>
+<td>3000</td>
+<td><code>fastify.listen({ port: 8080, host: '0.0.0.0' })</code></td>
+</tr>
+<tr>
+<td>NestJS</td>
+<td>3000</td>
+<td><code>app.listen(8080)</code></td>
+</tr>
+<tr>
+<td>Koa</td>
+<td>none</td>
+<td><code>app.listen(8080)</code></td>
+</tr>
+<tr>
+<td>Hapi</td>
+<td>none</td>
+<td><code>port: 8080</code> in server config</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="python">Python</h2>
+<table>
+<thead>
+<tr>
+<th>Framework</th>
+<th>Router / Server</th>
+<th>Default Port</th>
+<th>How to use port 8080</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Flask</td>
+<td>Werkzeug</td>
+<td>5000</td>
+<td><code>app.run(host='0.0.0.0', port=8080)</code></td>
+</tr>
+<tr>
+<td>Django</td>
+<td>Gunicorn / runserver</td>
+<td>8000</td>
+<td><code>CMD ["python", "manage.py", "runserver", "0.0.0.0:8080"]</code></td>
+</tr>
+<tr>
+<td>FastAPI</td>
+<td>Uvicorn</td>
+<td>8000</td>
+<td><code>CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]</code></td>
+</tr>
+<tr>
+<td>Tornado</td>
+<td>Built-in</td>
+<td>none</td>
+<td><code>app.listen(8080)</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="go">Go</h2>
+<table>
+<thead>
+<tr>
+<th>Framework</th>
+<th>Default Port</th>
+<th>How to use port 8080</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gin</td>
+<td>8080</td>
+<td>Already default - <code>r.Run(":8080")</code></td>
+</tr>
+<tr>
+<td>Echo</td>
+<td>1323</td>
+<td><code>e.Start(":8080")</code></td>
+</tr>
+<tr>
+<td>Fiber</td>
+<td>3000</td>
+<td><code>app.Listen(":8080")</code></td>
+</tr>
+<tr>
+<td>Chi</td>
+<td>none</td>
+<td><code>http.ListenAndServe(":8080", r)</code></td>
+</tr>
+<tr>
+<td>net/http (stdlib)</td>
+<td>none</td>
+<td><code>http.ListenAndServe(":8080", nil)</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="java">Java</h2>
+<table>
+<thead>
+<tr>
+<th>Framework</th>
+<th>Default Port</th>
+<th>How to use port 8080</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spring Boot</td>
+<td>8080</td>
+<td>Already default</td>
+</tr>
+<tr>
+<td>Quarkus</td>
+<td>8080</td>
+<td>Already default</td>
+</tr>
+<tr>
+<td>Micronaut</td>
+<td>8080</td>
+<td>Already default</td>
+</tr>
+<tr>
+<td>Vert.x</td>
+<td>8888</td>
+<td><code>vertx.createHttpServer().listen(8080)</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="c">C#</h2>
+<table>
+<thead>
+<tr>
+<th>Framework</th>
+<th>Default Port</th>
+<th>How to use port 8080</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ASP.NET Core</td>
+<td>5000</td>
+<td>Set env var <code>ASPNETCORE_URLS=http://+:8080</code> in container node config</td>
+</tr>
+<tr>
+<td>Minimal API</td>
+<td>5000</td>
+<td>Set env var <code>ASPNETCORE_URLS=http://+:8080</code> in container node config</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="rust">Rust</h2>
+<table>
+<thead>
+<tr>
+<th>Framework</th>
+<th>Default Port</th>
+<th>How to use port 8080</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Actix-web</td>
+<td>none</td>
+<td><code>.bind("0.0.0.0:8080")?</code></td>
+</tr>
+<tr>
+<td>Axum</td>
+<td>none</td>
+<td><code>TcpListener::bind("0.0.0.0:8080").await?</code></td>
+</tr>
+<tr>
+<td>Rocket</td>
+<td>8000</td>
+<td>Add <code>port = 8080</code> under <code>[default]</code> in <code>Rocket.toml</code></td>
+</tr>
+<tr>
+<td>Warp</td>
+<td>none</td>
+<td><code>warp::serve(routes).run(([0, 0, 0, 0], 8080)).await</code></td>
+</tr>
+</tbody>
+</table>
 
 
 
