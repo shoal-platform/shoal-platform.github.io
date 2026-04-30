@@ -573,6 +573,312 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ & Guides
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FAQ & Guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="guide-zip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zipping a Project Folder
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="guide-dockerfile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Writing a Dockerfile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="faq-shoal-live/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    What is eu1.shoal.live?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="faq-custom-domain/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setting up a Custom Domain
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="faq-env-vars/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Environment Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="faq-port/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    What Port to Use
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="faq-deployment-failing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Why is my Deployment Failing?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="faq-private-repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deploying a Private GitHub Repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -700,23 +1006,23 @@
 
 
 <h1 id="shoal-quick-start-guide">Shoal Quick Start Guide</h1>
-<p>Welcome to Shoal — the simplest way to deploy your application to the internet. Point Shoal at your GitHub repo, connect a proxy, and hit deploy. Shoal handles containers, scaling, SSL, and routing automatically, so you can focus on building.</p>
-<p>This guide walks you through everything you need to get started — from core concepts to deploying apps with databases, schedulers, and multi-service routing.</p>
+<p>Welcome to Shoal - the simplest way to deploy your application to the internet. Point Shoal at your GitHub repo, connect a proxy, and hit deploy. Shoal handles containers, scaling, SSL, and routing automatically, so you can focus on building.</p>
+<p>This guide walks you through everything you need to get started - from core concepts to deploying apps with databases, schedulers, and multi-service routing.</p>
 <h2 id="things-you-need-to-know">Things you need to know</h2>
 <h3 id="what-is-a-proxy-server-why-do-i-need-one">What is a proxy server? Why do I need one?</h3>
-<p>A proxy server sits in front of your app and routes incoming traffic to the right place. Think of it as a receptionist — visitors don't go straight to your desk, they check in first. On Shoal, your proxy handles this automatically so your app is reachable from the internet without any extra setup.</p>
-<p>It also keeps your app secure and stable. The proxy shields your app from direct exposure to the internet, handles SSL so all traffic is encrypted, and protects against sudden spikes by rate limiting incoming requests — so a surge in traffic won't take your app down.</p>
+<p>A proxy server sits in front of your app and routes incoming traffic to the right place. Think of it as a receptionist - visitors don't go straight to your desk, they check in first. On Shoal, your proxy handles this automatically so your app is reachable from the internet without any extra setup.</p>
+<p>It also keeps your app secure and stable. The proxy shields your app from direct exposure to the internet, handles SSL so all traffic is encrypted, and protects against sudden spikes by rate limiting incoming requests - so a surge in traffic won't take your app down.</p>
 <h3 id="what-is-a-container">What is a container?</h3>
-<p>A container is a lightweight package that holds your app and everything it needs to run — code, dependencies, settings. It works the same way on any machine, so there are no "works on my computer" surprises. Shoal runs your app inside containers behind the scenes.</p>
+<p>A container is a lightweight package that holds your app and everything it needs to run - code, dependencies, settings. It works the same way on any machine, so there are no "works on my computer" surprises. Shoal runs your app inside containers behind the scenes.</p>
 <h3 id="what-is-a-dockerfile">What is a Dockerfile?</h3>
-<p>A Dockerfile is a simple text file that describes how to build your container. It lists the steps to set up your app — what base image to start from, what files to copy in, and what command to run. Think of it as a recipe: Shoal follows it to package your app into a container that's ready to deploy.</p>
+<p>A Dockerfile is a simple text file that describes how to build your container. It lists the steps to set up your app - what base image to start from, what files to copy in, and what command to run. Think of it as a recipe: Shoal follows it to package your app into a container that's ready to deploy.</p>
 <p><em>Coming soon: Shoal will be able to build and deploy your app without needing a Dockerfile at all.</em></p>
 <h3 id="what-is-a-scheduler">What is a scheduler?</h3>
-<p>A scheduler runs tasks on a timer — like a cron job or a recurring reminder. If you need something to happen every night at midnight or every 5 minutes, a scheduler handles that for you without leaving a server running 24/7.</p>
+<p>A scheduler runs tasks on a timer - like a cron job or a recurring reminder. If you need something to happen every night at midnight or every 5 minutes, a scheduler handles that for you without leaving a server running 24/7.</p>
 <h3 id="where-does-shoal-deploy">Where does Shoal deploy?</h3>
-<p>Shoal currently deploys into <strong>Google Cloud Platform (GCP)</strong>. Support for Azure, AWS, and other cloud providers is coming soon — and if you want full control, you'll be able to deploy into your own private infrastructure too.</p>
+<p>Shoal currently deploys into <strong>Google Cloud Platform (GCP)</strong>. Support for Azure, AWS, and other cloud providers is coming soon - and if you want full control, you'll be able to deploy into your own private infrastructure too.</p>
 <h3 id="whats-a-project-and-an-environment">What's a project, and an environment?</h3>
-<p>A <strong>project</strong> is a collection of services that belong together — your app, its database, maybe a background worker. An <strong>environment</strong> is a version of that project for a specific purpose: typically <code>development</code> (for testing changes) and <code>production</code> (the live version your users see). Changes in development don't affect production until you're ready.</p>
+<p>A <strong>project</strong> is a collection of services that belong together - your app, its database, maybe a background worker. An <strong>environment</strong> is a version of that project for a specific purpose: typically <code>development</code> (for testing changes) and <code>production</code> (the live version your users see). Changes in development don't affect production until you're ready.</p>
 
 
 

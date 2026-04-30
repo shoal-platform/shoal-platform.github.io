@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../deploy-app-database/">
+        <link rel="prev" href="../guide-zip/">
       
       
-        <link rel="next" href="../deploy-app-multi/">
+        <link rel="next" href="../faq-shoal-live/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>Deploy with a Scheduler - Shoal</title>
+        <title>Writing a Dockerfile - Shoal</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#deploying-an-application-with-a-scheduler" class="md-skip">
+        <a href="#writing-a-dockerfile" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Deploy with a Scheduler
+              Writing a Dockerfile
             
           </span>
         </div>
@@ -283,20 +283,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -317,7 +315,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -388,37 +386,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Deploy with a Scheduler
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../deploy-app-scheduler/" class="md-nav__link">
         
   
   
@@ -434,59 +405,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#step-one" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step One
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-two" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step Two
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-three" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step Three
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -531,18 +449,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -563,7 +483,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -634,10 +554,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../guide-dockerfile/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Writing a Dockerfile
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -653,6 +600,48 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#where-does-it-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where does it go?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -860,10 +849,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#step-one" class="md-nav__link">
+  <a href="#where-does-it-go" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step One
+        Where does it go?
       
     </span>
   </a>
@@ -871,21 +860,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-two" class="md-nav__link">
+  <a href="#examples" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step Two
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-three" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step Three
+        Examples
       
     </span>
   </a>
@@ -909,17 +887,80 @@
 
 
 
-<h1 id="deploying-an-application-with-a-scheduler">Deploying an Application with a Scheduler</h1>
-<p>In this example, we have an application that runs on a schedule - for instance, posting a daily update to a Slack channel.</p>
-<p>You need two components: a <strong>container node</strong> and a <strong>scheduler node</strong>.</p>
-<ul>
-<li><strong>Container node</strong> - links to your source code and runs your container on demand.</li>
-<li><strong>Scheduler node</strong> - where you set the times Shoal should trigger your container.</li>
-</ul>
-<p>Hit deploy, and it just works.</p>
-<h3 id="step-one">Step One</h3>
-<h3 id="step-two">Step Two</h3>
-<h3 id="step-three">Step Three</h3>
+<h1 id="writing-a-dockerfile">Writing a Dockerfile</h1>
+<p>Shoal uses Docker to package and run your app in a container. A Dockerfile is a plain text file that describes how to do that - it tells Shoal what language runtime to use, how to install your dependencies, and how to start your app.</p>
+<p><strong>Without a Dockerfile, Shoal can't build your container.</strong> <em>(Support for automatic detection without a Dockerfile is coming soon.)</em></p>
+<h2 id="where-does-it-go">Where does it go?</h2>
+<p>The Dockerfile must be in the <strong>root of your project</strong> - the same top-level folder you're uploading or pointing your GitHub repo at.</p>
+<div class="highlight"><pre><span></span><code>my-project/
+├── Dockerfile        ← here
+├── main.py           (or index.js, main.go, etc.)
+├── requirements.txt  (or package.json, go.mod, etc.)
+└── ...
+</code></pre></div>
+<p>Shoal looks for it there automatically when you deploy. You don't need to configure the path.</p>
+<h2 id="examples">Examples</h2>
+<p>Here are simple starting-point Dockerfiles for common languages.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Python</label><label for="__tabbed_1_2">Node.js</label><label for="__tabbed_1_3">Go</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">python:3.12-slim</span>
+
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+
+<span class="k">COPY</span><span class="w"> </span>requirements.txt<span class="w"> </span>.
+<span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--no-cache-dir<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+
+<span class="k">COPY</span><span class="w"> </span>.<span class="w"> </span>.
+
+<span class="k">EXPOSE</span><span class="w"> </span><span class="s">8080</span>
+
+<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;python&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;main.py&quot;</span><span class="p">]</span>
+</code></pre></div>
+<blockquote>
+<p>Make sure your app listens on port <code>8080</code>, or update <code>EXPOSE</code> and your start command to match.</p>
+</blockquote>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">node:20-slim</span>
+
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+
+<span class="k">COPY</span><span class="w"> </span>package*.json<span class="w"> </span>./
+<span class="k">RUN</span><span class="w"> </span>npm<span class="w"> </span>ci<span class="w"> </span>--omit<span class="o">=</span>dev
+
+<span class="k">COPY</span><span class="w"> </span>.<span class="w"> </span>.
+
+<span class="k">EXPOSE</span><span class="w"> </span><span class="s">8080</span>
+
+<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;node&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;index.js&quot;</span><span class="p">]</span>
+</code></pre></div>
+<blockquote>
+<p>Replace <code>index.js</code> with your app's entry point if it differs.</p>
+</blockquote>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">golang:1.22-alpine</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s">builder</span>
+
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+<span class="k">COPY</span><span class="w"> </span>.<span class="w"> </span>.
+<span class="k">RUN</span><span class="w"> </span>go<span class="w"> </span>build<span class="w"> </span>-o<span class="w"> </span>server<span class="w"> </span>.
+
+<span class="k">FROM</span><span class="w"> </span><span class="s">alpine:latest</span>
+
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+<span class="k">COPY</span><span class="w"> </span>--from<span class="o">=</span>builder<span class="w"> </span>/app/server<span class="w"> </span>.
+
+<span class="k">EXPOSE</span><span class="w"> </span><span class="s">8080</span>
+
+<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;./server&quot;</span><span class="p">]</span>
+</code></pre></div>
+<blockquote>
+<p>This uses a two-stage build - the final image contains only your compiled binary, keeping it small.</p>
+</blockquote>
+</div>
+</div>
+</div>
 
 
 

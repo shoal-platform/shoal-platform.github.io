@@ -549,6 +549,312 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ & Guides
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FAQ & Guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide-zip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zipping a Project Folder
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide-dockerfile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Writing a Dockerfile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq-shoal-live/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    What is eu1.shoal.live?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq-custom-domain/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setting up a Custom Domain
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq-env-vars/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Environment Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq-port/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    What Port to Use
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq-deployment-failing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Why is my Deployment Failing?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq-private-repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deploying a Private GitHub Repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -651,8 +957,8 @@
 <p>In this example, we have an application connected to a database hosted on <a href="https://neon.tech">Neon</a>. <em>(Shoal will soon support its own managed databases.)</em></p>
 <p>You need two components: a <strong>container node</strong> and a <strong>proxy node</strong>.</p>
 <ul>
-<li><strong>Container node</strong> — links to your source code, runs and scales your container, and lets you add secrets and environment variables (like your database connection string).</li>
-<li><strong>Proxy node</strong> — where you set the DNS name for your app.</li>
+<li><strong>Container node</strong> - links to your source code, runs and scales your container, and lets you add environment variables (like your database connection string).</li>
+<li><strong>Proxy node</strong> - where you set the DNS name for your app.</li>
 </ul>
 <p>Hit deploy, and it just works.</p>
 <h3 id="step-one">Step One</h3>
@@ -661,15 +967,15 @@
 <h3 id="step-two">Step Two</h3>
 <p>Click the proxy node, open the <strong>Config</strong> tab, and enter the URL name you want. For example, entering <code>shopping-test</code> will make your app available at <code>shopping-test.eu1.shoal.live</code>. You can also point a custom domain at this address.</p>
 <h3 id="step-three">Step Three</h3>
-<p>Click the container node, open the <strong>Config</strong> tab, and set up your source — either a GitHub repo or a file upload. You'll need a Dockerfile in your code.</p>
+<p>Click the container node, open the <strong>Config</strong> tab, and set up your source - either a GitHub repo or a file upload. You'll need a Dockerfile in your code.</p>
 <p>Add any environment variables your app needs here. For example:</p>
-<pre><code>DATABASE_CONNECTION = postgresql://neondb_owner:password@server.aws.neon.tech/neondb?sslmode=require
-</code></pre>
-<p>Environment variables and secrets are passed in at runtime only — they're stored securely and encrypted. You can also review, add, or remove them any time from the <strong>Settings</strong> menu in your project.</p>
+<div class="highlight"><pre><span></span><code>DATABASE_CONNECTION = postgresql://neondb_owner:password@server.aws.neon.tech/neondb?sslmode=require
+</code></pre></div>
+<p>Environment variables are passed in at runtime only - they're stored securely and encrypted. You can also review, add, or remove them any time from the <strong>Settings</strong> menu in your project.</p>
 <h3 id="step-four">Step Four</h3>
 <p>Press <strong>Deploy</strong>. You can watch the deployment in real time via the <strong>Observability</strong> menu, or by clicking the link on the deploy button.</p>
 <h3 id="done">Done</h3>
-<p>Your app is live at the address you configured — connected to your database and running in a scalable, resilient, and protected environment.</p>
+<p>Your app is live at the address you configured - connected to your database and running in a scalable, resilient, and protected environment.</p>
 
 
 
