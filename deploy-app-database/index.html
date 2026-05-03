@@ -778,7 +778,35 @@
   <span class="md-ellipsis">
     
   
-    What Port to Use
+    Framework Default Ports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq-crontab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Crontab Expressions
   
 
     
@@ -955,22 +983,26 @@
 
 <h1 id="deploying-an-application-with-a-database">Deploying an Application with a Database</h1>
 <p>In this example, we have an application connected to a database hosted on <a href="https://neon.tech">Neon</a>. <em>(Shoal will soon support its own managed databases.)</em></p>
-<p>You need two components: a <strong>container node</strong> and a <strong>proxy node</strong>.</p>
+<p>You need two components: a <strong>container node</strong> and a <strong>gateway node</strong>.</p>
 <ul>
 <li><strong>Container node</strong> - links to your source code, runs and scales your container, and lets you add environment variables (like your database connection string).</li>
-<li><strong>Proxy node</strong> - where you set the DNS name for your app.</li>
+<li><strong>Gateway node</strong> - where you set the DNS name for your app.</li>
 </ul>
 <p>Hit deploy, and it just works.</p>
 <h3 id="step-one">Step One</h3>
-<p>Drag a container node and a proxy node onto the canvas, then link them together. You can also add a comment box if you like.</p>
+<p>Drag a container node and a gateway node onto the canvas, then link them together. You can also add a comment box if you like.</p>
 <p><img alt="Create App" src="../assets/screenshots/app1.png" /></p>
 <h3 id="step-two">Step Two</h3>
-<p>Click the proxy node, open the <strong>Config</strong> tab, and enter the URL name you want. For example, entering <code>shopping-test</code> will make your app available at <code>shopping-test.eu1.shoal.live</code>. You can also point a custom domain at this address.</p>
+<p>Click the gateway node, open the <strong>Config</strong> tab, and enter the URL name you want. For example, entering <code>shopping-test</code> will make your app available at <code>shopping-test.eu1.shoal.live</code>. You can also point a custom domain at this address.</p>
+<p><img alt="Create App" src="../assets/screenshots/app2.png" /></p>
 <h3 id="step-three">Step Three</h3>
 <p>Click the container node, open the <strong>Config</strong> tab, and set up your source - either a GitHub repo or a file upload. You'll need a Dockerfile in your code.</p>
+<p>You can add the envirorment variables via the config on the container, or via the settings page on the actual environment.</p>
 <p>Add any environment variables your app needs here. For example:</p>
 <div class="highlight"><pre><span></span><code>DATABASE_CONNECTION = postgresql://neondb_owner:password@server.aws.neon.tech/neondb?sslmode=require
 </code></pre></div>
+<p><img alt="Create App" src="../assets/screenshots/app5.png" />
+<img alt="Create App" src="../assets/screenshots/app6.png" /></p>
 <p>Environment variables are passed in at runtime only - they're stored securely and encrypted. You can also review, add, or remove them any time from the <strong>Settings</strong> menu in your project.</p>
 <h3 id="step-four">Step Four</h3>
 <p>Press <strong>Deploy</strong>. You can watch the deployment in real time via the <strong>Observability</strong> menu, or by clicking the link on the deploy button.</p>

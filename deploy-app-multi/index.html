@@ -479,6 +479,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#example-a-shopping-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example - a shopping app
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example - a shopping app">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#step-one" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -488,8 +500,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#step-two" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -499,8 +511,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#step-three" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -510,8 +522,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#step-four" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -521,19 +533,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#step-five" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step Five
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#done" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -541,6 +542,11 @@
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -789,7 +795,35 @@
   <span class="md-ellipsis">
     
   
-    What Port to Use
+    Framework Default Ports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq-crontab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Crontab Expressions
   
 
     
@@ -893,6 +927,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#example-a-shopping-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example - a shopping app
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example - a shopping app">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#step-one" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -902,8 +948,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#step-two" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -913,8 +959,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#step-three" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -924,8 +970,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#step-four" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -935,19 +981,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#step-five" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step Five
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#done" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -955,6 +990,11 @@
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -976,28 +1016,80 @@
 
 
 <h1 id="deploying-an-application-with-multiple-containers-and-routing">Deploying an Application with Multiple Containers and Routing</h1>
-<p>In this example, we have an application made up of several services, all exposed under one domain.</p>
-<p>You need four components: three <strong>container nodes</strong> and one <strong>proxy node</strong>.</p>
+<p>In this example, we have an application made up of several independent services, all exposed under one domain. The gateway routes incoming requests to the right container based on the URL path.</p>
+<p>You need four components: three <strong>container nodes</strong> and one <strong>gateway node</strong>.</p>
 <ul>
 <li><strong>Container nodes</strong> - each links to its own source code and runs independently, with automatic scaling and resilience.</li>
-<li><strong>Proxy node</strong> - routes incoming requests to the right container based on the path or subdomain you configure.</li>
+<li><strong>Gateway node</strong> - directs incoming traffic to the right container based on the path you configure.</li>
 </ul>
 <p>Hit deploy, and it just works.</p>
+<hr />
+<h2 id="example-a-shopping-app">Example - a shopping app</h2>
+<p>In this example our app has three separate services, each responsible for a distinct part of the system:</p>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Responsibility</th>
+<th>Path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inventory service</td>
+<td>Lists products and provides item details</td>
+<td><code>/inventory/</code></td>
+</tr>
+<tr>
+<td>Cart service</td>
+<td>Tracks what users are adding and buying</td>
+<td><code>/cart/</code></td>
+</tr>
+<tr>
+<td>Payments service</td>
+<td>Handles checkout and links to payment providers</td>
+<td><code>/payments/</code></td>
+</tr>
+</tbody>
+</table>
+<p>Each service listens on its own path, and the gateway uses those paths to route traffic to the correct container.</p>
+<div class="admonition info">
+<p class="admonition-title">How path routing works</p>
+<p>The gateway matches the beginning of the URL path to decide where to send traffic. So a request to <code>shop.eu1.shoal.live/cart/add</code> is routed to the cart container, and <code>shop.eu1.shoal.live/inventory/search</code> goes to the inventory container.</p>
+<p>You can also use <code>/</code> as a catch-all route for a container - it will receive all traffic that doesn't match a more specific path. More specific paths always take priority, so <code>/cart/</code> will always win over <code>/</code>.</p>
+</div>
+<hr />
 <h3 id="step-one">Step One</h3>
-<p>Drag a container node and a proxy node onto the canvas, then link them together. You can also add a comment box if you like.</p>
-<p><img alt="Create App" src="../assets/screenshots/app1.png" /></p>
+<p>Drag three container nodes and a gateway node onto the canvas. Link each container to the gateway, then configure each container node with its GitHub repo or file upload.</p>
+<p><img alt="Create App" src="../assets/screenshots/app9.png" /></p>
 <h3 id="step-two">Step Two</h3>
-<p>Click the proxy node, open the <strong>Config</strong> tab, and enter the URL name you want. For example, entering <code>shopping-test</code> will make your app available at <code>shopping-test.eu1.shoal.live</code>. You can also point a custom domain at this address.</p>
+<p>Set the path for each connection. Double-click a link between a container and the gateway to enter the path that should route to that container.</p>
+<table>
+<thead>
+<tr>
+<th>Connection</th>
+<th>Path to set</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gateway → Inventory</td>
+<td><code>/inventory/</code></td>
+</tr>
+<tr>
+<td>Gateway → Cart</td>
+<td><code>/cart/</code></td>
+</tr>
+<tr>
+<td>Gateway → Payments</td>
+<td><code>/payments/</code></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Create App" src="../assets/screenshots/app10.png" /></p>
 <h3 id="step-three">Step Three</h3>
-<p>Click each container node, open the <strong>Config</strong> tab, and set up its source - either a GitHub repo or a file upload. You'll need a Dockerfile in each service's code.</p>
+<p>Click the gateway node, open the <strong>Config</strong> tab, and enter the URL name you want. For example, entering <code>shopping-test</code> will make your app available at <code>shopping-test.eu1.shoal.live</code>. You can also point a custom domain at this address.</p>
 <h3 id="step-four">Step Four</h3>
-<p>Configure routing on the proxy node. Double-click a connection to enter the path prefix you want to route to each service. For example, if you have a finance service and a payment service:</p>
-<ul>
-<li><code>/finance/</code> → finance container</li>
-<li><code>/payments/</code> → payments container</li>
-</ul>
-<p>A standard pattern for services and microservices is to include a version in the path - e.g. <code>/finance/v1/...</code> and <code>/payments/v1/...</code>. This keeps routing clean and gives your frontend a stable contract as services evolve.</p>
-<h3 id="step-five">Step Five</h3>
 <p>Press <strong>Deploy</strong>. You can watch the deployment in real time via the <strong>Observability</strong> menu, or by clicking the link on the deploy button.</p>
 <h3 id="done">Done</h3>
 <p>Your app is live at the address you configured - with traffic routed to the right service, running in a scalable, resilient, and protected environment.</p>
