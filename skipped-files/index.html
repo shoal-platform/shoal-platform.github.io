@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../skipped-files/">
+        <link rel="prev" href="../guide-zip/">
       
       
-        <link rel="next" href="../faq-shoal-live/">
+        <link rel="next" href="../guide-dockerfile/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>Writing a Dockerfile - Shoal</title>
+        <title>Skipped Upload Files - Shoal</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#writing-a-dockerfile" class="md-skip">
+        <a href="#skipped-files-on-upload" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Writing a Dockerfile
+              Skipped Upload Files
             
           </span>
         </div>
@@ -581,34 +581,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../skipped-files/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Skipped Upload Files
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -628,7 +600,7 @@
   <span class="md-ellipsis">
     
   
-    Writing a Dockerfile
+    Skipped Upload Files
   
 
     
@@ -646,7 +618,7 @@
   <span class="md-ellipsis">
     
   
-    Writing a Dockerfile
+    Skipped Upload Files
   
 
     
@@ -672,10 +644,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#where-does-it-go" class="md-nav__link">
+  <a href="#skipped-folders" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Where does it go?
+        Skipped folders
       
     </span>
   </a>
@@ -683,10 +655,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
+  <a href="#skipped-files" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Examples
+        Skipped files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skipped-file-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skipped file types
       
     </span>
   </a>
@@ -697,6 +680,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide-dockerfile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Writing a Dockerfile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -932,10 +943,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#where-does-it-go" class="md-nav__link">
+  <a href="#skipped-folders" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Where does it go?
+        Skipped folders
       
     </span>
   </a>
@@ -943,10 +954,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
+  <a href="#skipped-files" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Examples
+        Skipped files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skipped-file-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skipped file types
       
     </span>
   </a>
@@ -970,79 +992,333 @@
 
 
 
-<h1 id="writing-a-dockerfile">Writing a Dockerfile</h1>
-<p>Shoal uses Docker to package and run your app in a container. A Dockerfile is a plain text file that describes how to do that - it tells Shoal what language runtime to use, how to install your dependencies, and how to start your app.</p>
-<p><strong>Without a Dockerfile, Shoal can't build your container.</strong> <em>(Support for automatic detection without a Dockerfile is coming soon.)</em></p>
-<h2 id="where-does-it-go">Where does it go?</h2>
-<p>The Dockerfile must be in the <strong>root of your project</strong> - the same top-level folder you're uploading or pointing your GitHub repo at.</p>
-<div class="highlight"><pre><span></span><code>my-project/
-├── Dockerfile        ← here
-├── main.py           (or index.js, main.go, etc.)
-├── requirements.txt  (or package.json, go.mod, etc.)
-└── ...
-</code></pre></div>
-<p>Shoal looks for it there automatically when you deploy. You don't need to configure the path.</p>
-<h2 id="examples">Examples</h2>
-<p>Here are simple starting-point Dockerfiles for common languages.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Python</label><label for="__tabbed_1_2">Node.js</label><label for="__tabbed_1_3">Go</label></div>
+<h1 id="skipped-files-on-upload">Skipped Files on Upload</h1>
+<p>When you upload a folder directly, Shoal automatically strips out files and folders that don't belong in a deployed container - things like dependencies, build artefacts, caches, and editor config. This keeps uploads fast and your container clean.</p>
+<div class="admonition info">
+<p class="admonition-title">Zip uploads too</p>
+<p>The same skip rules apply when uploading a zip file. Matched files and folders are removed before your code is sent to the build pipeline.</p>
+</div>
+<hr />
+<h2 id="skipped-folders">Skipped folders</h2>
+<p>Folders are skipped if any part of their path matches a name in this list. For example, <code>src/__pycache__/</code> is skipped because the segment <code>__pycache__</code> matches.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:8"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><input id="__tabbed_1_7" name="__tabbed_1" type="radio" /><input id="__tabbed_1_8" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97s-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1s.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64z"/></svg></span> General</label><label for="__tabbed_1_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.998 24c-.321 0-.641-.084-.922-.247L8.14 22.016c-.438-.245-.224-.332-.08-.383.585-.203.703-.25 1.328-.604.065-.037.151-.023.218.017l2.256 1.339a.29.29 0 0 0 .272 0l8.795-5.076a.28.28 0 0 0 .134-.238V6.921a.28.28 0 0 0-.137-.242l-8.791-5.072a.28.28 0 0 0-.271 0L3.075 6.68a.28.28 0 0 0-.139.241v10.15a.27.27 0 0 0 .139.235l2.409 1.392c1.307.654 2.108-.116 2.108-.89V7.787c0-.142.114-.253.256-.253h1.115c.139 0 .255.112.255.253v10.021c0 1.745-.95 2.745-2.604 2.745-.508 0-.909 0-2.026-.551L2.28 18.675a1.86 1.86 0 0 1-.922-1.604V6.921c0-.659.353-1.275.922-1.603L11.075.236a1.93 1.93 0 0 1 1.848 0l8.794 5.082c.57.329.924.944.924 1.603v10.15a1.86 1.86 0 0 1-.924 1.604l-8.794 5.078c-.28.163-.599.247-.925.247m7.101-10.007c0-1.9-1.284-2.406-3.987-2.763-2.731-.361-3.009-.548-3.009-1.187 0-.528.235-1.233 2.258-1.233 1.807 0 2.473.389 2.747 1.607a.254.254 0 0 0 .247.199h1.141a.26.26 0 0 0 .186-.081.26.26 0 0 0 .067-.196c-.177-2.098-1.571-3.076-4.388-3.076-2.508 0-4.004 1.058-4.004 2.833 0 1.925 1.488 2.457 3.895 2.695 2.88.282 3.103.703 3.103 1.269 0 .983-.789 1.402-2.642 1.402-2.327 0-2.839-.584-3.011-1.742a.255.255 0 0 0-.253-.215h-1.137a.25.25 0 0 0-.254.253c0 1.482.806 3.248 4.655 3.248 2.788.001 4.386-1.096 4.386-3.013"/></svg></span> Node.js</label><label for="__tabbed_1_3"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.25.18.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/></svg></span> Python</label><label for="__tabbed_1_4"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.811 10.231c-.047 0-.058-.023-.035-.059l.246-.315c.023-.035.081-.058.128-.058h4.172c.046 0 .058.035.035.07l-.199.303c-.023.036-.082.07-.117.07zM.047 11.306c-.047 0-.059-.023-.035-.058l.245-.316c.023-.035.082-.058.129-.058h5.328c.047 0 .07.035.058.07l-.093.28c-.012.047-.058.07-.105.07zm2.828 1.075c-.047 0-.059-.035-.035-.07l.163-.292c.023-.035.07-.07.117-.07h2.337c.047 0 .07.035.07.082l-.023.28c0 .047-.047.082-.082.082zm12.129-2.36c-.736.187-1.239.327-1.963.514-.176.046-.187.058-.34-.117-.174-.199-.303-.327-.548-.444-.737-.362-1.45-.257-2.115.175-.795.514-1.204 1.274-1.192 2.22.011.935.654 1.706 1.577 1.835.795.105 1.46-.175 1.987-.77.105-.13.198-.27.315-.434H10.47c-.245 0-.304-.152-.222-.35.152-.362.432-.97.596-1.274a.32.32 0 0 1 .292-.187h4.253c-.023.316-.023.631-.07.947a5 5 0 0 1-.958 2.29c-.841 1.11-1.94 1.8-3.33 1.986-1.145.152-2.209-.07-3.143-.77-.865-.655-1.356-1.52-1.484-2.595-.152-1.274.222-2.419.993-3.424.83-1.086 1.928-1.776 3.272-2.02 1.098-.2 2.15-.07 3.096.571.62.41 1.063.97 1.356 1.648.07.105.023.164-.117.2m3.868 6.461c-1.064-.024-2.034-.328-2.852-1.029a3.67 3.67 0 0 1-1.262-2.255c-.21-1.32.152-2.489.947-3.529.853-1.122 1.881-1.706 3.272-1.95 1.192-.21 2.314-.095 3.33.595.923.63 1.496 1.484 1.648 2.605.198 1.578-.257 2.863-1.344 3.962-.771.783-1.718 1.273-2.805 1.495-.315.06-.63.07-.934.106m2.78-4.72c-.011-.153-.011-.27-.034-.387-.21-1.157-1.274-1.81-2.384-1.554-1.087.245-1.788.935-2.045 2.033-.21.912.234 1.835 1.075 2.21.643.28 1.285.244 1.905-.07.923-.48 1.425-1.228 1.484-2.233z"/></svg></span> Go / <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.01 10.207h-.944l-.515 2.648h.838q.834 0 1.242-.314.408-.315.55-1.049.137-.705-.124-.995-.262-.29-1.047-.29M12 5.688C5.373 5.688 0 8.514 0 12s5.373 6.313 12 6.313S24 15.486 24 12s-5.373-6.312-12-6.312m-3.26 7.451c-.261.25-.575.438-.917.551q-.505.163-1.285.164H5.357l-.327 1.681H3.652l1.23-6.326h2.65q1.195 0 1.744.628.549.627.33 1.752a2.8 2.8 0 0 1-.305.847q-.215.383-.561.703m4.024.715.543-2.799q.094-.478-.068-.651-.16-.174-.687-.174H11.46l-.704 3.625H9.388l1.23-6.327h1.367l-.327 1.682h1.218q1.15 0 1.586.401c.436.401.378.7.263 1.299l-.572 2.944zm7.597-2.265a2.8 2.8 0 0 1-.305.847q-.214.383-.561.703a2.44 2.44 0 0 1-.917.551q-.504.163-1.286.164h-1.18l-.327 1.682h-1.378l1.23-6.326h2.649q1.195 0 1.744.628.55.626.331 1.751m-2.595-1.382h-.943l-.516 2.648h.838q.835 0 1.242-.314.407-.315.551-1.049.137-.705-.125-.995c-.262-.29-.524-.29-1.047-.29"/></svg></span> PHP</label><label for="__tabbed_1_5"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M277.8 312.9c9.8-6.7 23.4-12.5 23.4-12.5s-38.7 7-77.2 10.2c-47.1 3.9-97.7 4.7-123.1 1.3-60.1-8 33-30.1 33-30.1s-36.1-2.4-80.6 19c-52.5 25.4 130 37 224.5 12.1m-85.4-32.1c-19-42.7-83.1-80.2 0-145.8C296.1 53.2 242.9 0 242.9 0c21.5 84.5-75.6 110.1-110.7 162.6-23.9 35.9 11.7 74.4 60.2 118.2M307 104.6c.1 0-175.2 43.8-91.5 140.2 24.7 28.4-6.5 54-6.5 54s62.7-32.4 33.9-72.9c-26.9-37.8-47.5-56.6 64.1-121.3m-6.1 270.5c-.5 1-1.2 1.8-2 2.6 128.3-33.7 81.1-118.9 19.8-97.3-3.3 1.2-6.2 3.4-8.2 6.3 3.6-1.3 7.3-2.3 11-3 31-6.5 75.5 41.5-20.6 91.4m47.1 62.3s14.5 11.9-15.9 21.2c-57.9 17.5-240.8 22.8-291.6.7-18.3-7.9 16-19 26.8-21.3 11.2-2.4 17.7-2 17.7-2-20.3-14.3-131.3 28.1-56.4 40.2C232.8 509.4 401 461.3 348 437.4M124.5 396c-78.7 22 47.9 67.4 148.1 24.5q-14.7-5.7-28.2-13.8c-44.7 8.5-65.4 9.1-106 4.5-33.5-3.8-13.9-15.2-13.9-15.2m179.8 97.2C225.6 508 128.5 506.3 71 496.8c0-.1 11.8 9.7 72.4 13.6 92.2 5.9 233.8-3.3 237.1-46.9 0 0-6.4 16.5-76.2 29.7M260.7 353c-59.2 11.4-93.5 11.1-136.8 6.6-33.5-3.5-11.6-19.7-11.6-19.7-86.8 28.8 48.2 61.4 169.5 25.9-7.8-2.8-15-7.1-21.1-12.8"/></svg></span> Java / <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 24H0V0h24L12 12Z"/></svg></span> Kotlin</label><label for="__tabbed_1_6"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 8.77h-2.468v7.565h-1.425V8.77h-2.462V7.53H24zm-6.852 7.565h-4.821V7.53h4.63v1.24h-3.205v2.494h2.953v1.234h-2.953v2.604h3.396zm-6.708 0H8.882L4.78 9.863a3 3 0 0 1-.258-.51h-.036q.048.283.048 1.21v5.772H3.157V7.53h1.659l3.965 6.32q.25.392.323.54h.024q-.06-.35-.06-1.185V7.529h1.372zm-8.703-.693a.868.829 0 0 1-.869.829.868.829 0 0 1-.868-.83.868.829 0 0 1 .868-.828.868.829 0 0 1 .869.829"/></svg></span> C#</label><label for="__tabbed_1_7"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.156.083c3.033.525 3.893 2.598 3.829 4.77L24 4.822 22.635 22.71 4.89 23.926h.016C3.433 23.864.15 23.729 0 19.139l1.645-3 2.819 6.586.503 1.172 2.805-9.144-.03.007.016-.03 9.255 2.956-1.396-5.431-.99-3.9 8.82-.569-.615-.51L16.5 2.114 20.159.073zM5.13 5.073c3.561-3.533 8.157-5.621 9.922-3.84 1.762 1.777-.105 6.105-3.673 9.636-3.563 3.532-8.103 5.734-9.864 3.957-1.766-1.777.045-6.217 3.612-9.75z"/></svg></span> Ruby</label><label for="__tabbed_1_8"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.793 16.575c0 3.752-2.927 7.426-7.743 7.426-5.249 0-7.843-3.71-7.843-8.29 0-5.21 3.892-12.952 8-15.647a.397.397 0 0 1 .61.371 9.72 9.72 0 0 0 1.694 6.518c.522.795 1.092 1.478 1.763 2.352.94 1.227 1.637 1.906 2.644 3.842l.015.028a7.1 7.1 0 0 1 .86 3.4"/></svg></span> Elixir</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">python:3.12-slim</span>
-
-<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
-
-<span class="k">COPY</span><span class="w"> </span>requirements.txt<span class="w"> </span>.
-<span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--no-cache-dir<span class="w"> </span>-r<span class="w"> </span>requirements.txt
-
-<span class="k">COPY</span><span class="w"> </span>.<span class="w"> </span>.
-
-<span class="k">EXPOSE</span><span class="w"> </span><span class="s">8080</span>
-
-<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;python&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;main.py&quot;</span><span class="p">]</span>
-</code></pre></div>
-<blockquote>
-<p>Make sure your app listens on port <code>8080</code>, or update <code>EXPOSE</code> and your start command to match.</p>
-</blockquote>
+<table>
+<thead>
+<tr>
+<th>Folder</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.git</code></td>
+<td>Git history - not needed at runtime</td>
+</tr>
+<tr>
+<td><code>.github</code></td>
+<td>CI/CD workflow config</td>
+</tr>
+<tr>
+<td><code>.idea</code></td>
+<td>JetBrains IDE config</td>
+</tr>
+<tr>
+<td><code>.vscode</code></td>
+<td>VS Code editor config</td>
+</tr>
+<tr>
+<td><code>dist</code></td>
+<td>Build output - rebuilt by Docker</td>
+</tr>
+<tr>
+<td><code>build</code></td>
+<td>Build output - rebuilt by Docker</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">node:20-slim</span>
-
-<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
-
-<span class="k">COPY</span><span class="w"> </span>package*.json<span class="w"> </span>./
-<span class="k">RUN</span><span class="w"> </span>npm<span class="w"> </span>ci<span class="w"> </span>--omit<span class="o">=</span>dev
-
-<span class="k">COPY</span><span class="w"> </span>.<span class="w"> </span>.
-
-<span class="k">EXPOSE</span><span class="w"> </span><span class="s">8080</span>
-
-<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;node&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;index.js&quot;</span><span class="p">]</span>
-</code></pre></div>
-<blockquote>
-<p>Replace <code>index.js</code> with your app's entry point if it differs.</p>
-</blockquote>
+<table>
+<thead>
+<tr>
+<th>Folder</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>node_modules</code></td>
+<td>Dependencies - reinstalled by <code>npm install</code> in Docker</td>
+</tr>
+<tr>
+<td><code>.next</code></td>
+<td>Next.js build cache</td>
+</tr>
+<tr>
+<td><code>.nuxt</code></td>
+<td>Nuxt build cache</td>
+</tr>
+<tr>
+<td><code>.turbo</code></td>
+<td>Turborepo cache</td>
+</tr>
+<tr>
+<td><code>coverage</code></td>
+<td>Test coverage output</td>
+</tr>
+<tr>
+<td><code>.nyc_output</code></td>
+<td>NYC/Istanbul coverage data</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">golang:1.22-alpine</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s">builder</span>
-
-<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
-<span class="k">COPY</span><span class="w"> </span>.<span class="w"> </span>.
-<span class="k">RUN</span><span class="w"> </span>go<span class="w"> </span>build<span class="w"> </span>-o<span class="w"> </span>server<span class="w"> </span>.
-
-<span class="k">FROM</span><span class="w"> </span><span class="s">alpine:latest</span>
-
-<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
-<span class="k">COPY</span><span class="w"> </span>--from<span class="o">=</span>builder<span class="w"> </span>/app/server<span class="w"> </span>.
-
-<span class="k">EXPOSE</span><span class="w"> </span><span class="s">8080</span>
-
-<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;./server&quot;</span><span class="p">]</span>
-</code></pre></div>
-<blockquote>
-<p>This uses a two-stage build - the final image contains only your compiled binary, keeping it small.</p>
-</blockquote>
+<table>
+<thead>
+<tr>
+<th>Folder</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.venv</code></td>
+<td>Virtual environment - recreated in Docker</td>
+</tr>
+<tr>
+<td><code>venv</code></td>
+<td>Virtual environment - recreated in Docker</td>
+</tr>
+<tr>
+<td><code>env</code></td>
+<td>Virtual environment - recreated in Docker</td>
+</tr>
+<tr>
+<td><code>__pycache__</code></td>
+<td>Compiled bytecode cache</td>
+</tr>
+<tr>
+<td><code>.pytest_cache</code></td>
+<td>Pytest run cache</td>
+</tr>
+<tr>
+<td><code>.mypy_cache</code></td>
+<td>Mypy type-check cache</td>
+</tr>
+<tr>
+<td><code>.ruff_cache</code></td>
+<td>Ruff linter cache</td>
+</tr>
+<tr>
+<td><code>htmlcov</code></td>
+<td>HTML coverage report output</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Folder</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>vendor</code></td>
+<td>Vendored dependencies - reinstalled in Docker</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Folder</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>target</code></td>
+<td>Maven build output</td>
+</tr>
+<tr>
+<td><code>.gradle</code></td>
+<td>Gradle cache</td>
+</tr>
+<tr>
+<td><code>out</code></td>
+<td>IntelliJ build output</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Folder</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bin</code></td>
+<td>Compiled binaries</td>
+</tr>
+<tr>
+<td><code>obj</code></td>
+<td>Intermediate build files</td>
+</tr>
+<tr>
+<td><code>.vs</code></td>
+<td>Visual Studio local config</td>
+</tr>
+<tr>
+<td><code>packages</code></td>
+<td>NuGet package cache</td>
+</tr>
+<tr>
+<td><code>TestResults</code></td>
+<td>Test run output</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Folder</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.bundle</code></td>
+<td>Bundler config and cached gems</td>
+</tr>
+<tr>
+<td><code>tmp</code></td>
+<td>Rails temp files</td>
+</tr>
+<tr>
+<td><code>log</code></td>
+<td>Rails log files</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Folder</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>_build</code></td>
+<td>Mix build output</td>
+</tr>
+<tr>
+<td><code>deps</code></td>
+<td>Mix dependencies - fetched in Docker</td>
+</tr>
+<tr>
+<td><code>.elixir_ls</code></td>
+<td>ElixirLS language server data</td>
+</tr>
+<tr>
+<td><code>cover</code></td>
+<td>ExCoveralls coverage output</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
+</div>
+<hr />
+<h2 id="skipped-files">Skipped files</h2>
+<p>Exact filename matches that are always removed:</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.DS_Store</code></td>
+<td>macOS folder metadata</td>
+</tr>
+<tr>
+<td><code>Thumbs.db</code></td>
+<td>Windows thumbnail cache</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="skipped-file-types">Skipped file types</h2>
+<p>Files are also skipped based on their extension:</p>
+<table>
+<thead>
+<tr>
+<th>Extension</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.log</code></td>
+<td>Log files</td>
+</tr>
+<tr>
+<td><code>.tmp</code></td>
+<td>Temporary files</td>
+</tr>
+<tr>
+<td><code>.pyc</code></td>
+<td>Python compiled bytecode</td>
+</tr>
+<tr>
+<td><code>.pyo</code></td>
+<td>Python optimised bytecode</td>
+</tr>
+<tr>
+<td><code>.class</code></td>
+<td>Java compiled class files</td>
+</tr>
+<tr>
+<td><code>.war</code></td>
+<td>Java web archive</td>
+</tr>
+<tr>
+<td><code>.pdb</code></td>
+<td>.NET debug symbols</td>
+</tr>
+<tr>
+<td><code>.tsbuildinfo</code></td>
+<td>TypeScript incremental build info</td>
+</tr>
+<tr>
+<td><code>.gem</code></td>
+<td>Ruby gem packages</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<div class="admonition warning">
+<p class="admonition-title">Something missing from your deployment?</p>
+<p>If a file you expect to be present isn't making it into your container, the skip logic may be the cause. Check this list first - if your file matches a skipped folder name, filename, or extension, rename or restructure it to avoid the match.</p>
 </div>
 
 

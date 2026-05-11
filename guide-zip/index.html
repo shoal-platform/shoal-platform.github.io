@@ -12,7 +12,7 @@
         <link rel="prev" href="../faq/">
       
       
-        <link rel="next" href="../guide-dockerfile/">
+        <link rel="next" href="../skipped-files/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>Zipping a Project Folder - Shoal</title>
+        <title>Uploading Your Project - Shoal</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-zip-your-project-folder" class="md-skip">
+        <a href="#uploading-your-project" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Zipping a Project Folder
+              Uploading Your Project
             
           </span>
         </div>
@@ -565,6 +565,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uploading Your Project
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -572,7 +590,7 @@
   <span class="md-ellipsis">
     
   
-    Zipping a Project Folder
+    Uploading Your Project
   
 
     
@@ -582,6 +600,75 @@
 
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#option-1-upload-a-folder-directly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 1 - Upload a folder directly
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option-2-upload-a-zip-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 2 - Upload a zip file
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../skipped-files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Skipped Upload Files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -838,6 +925,36 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#option-1-upload-a-folder-directly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 1 - Upload a folder directly
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option-2-upload-a-zip-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 2 - Upload a zip file
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -853,8 +970,35 @@
 
 
 
-<h1 id="how-to-zip-your-project-folder">How to Zip Your Project Folder</h1>
-<p>Shoal accepts a zip file of your project when you don't want to connect a GitHub repo directly.</p>
+<h1 id="uploading-your-project">Uploading Your Project</h1>
+<p>When connecting a container node to a file source, you have two options:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>How</th>
+<th>Best for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Folder upload</strong></td>
+<td>Select a folder directly - no zipping needed</td>
+<td>Most cases</td>
+</tr>
+<tr>
+<td><strong>Zip upload</strong></td>
+<td>Create a zip and upload the file</td>
+<td>Large projects, scripted uploads</td>
+</tr>
+</tbody>
+</table>
+<h2 id="option-1-upload-a-folder-directly">Option 1 - Upload a folder directly</h2>
+<p>Select the folder option in the container node config and pick your project folder. Shoal handles everything automatically - no zipping required.</p>
+<p>Shoal also automatically removes files that don't belong in a deployed container (dependencies, caches, build artefacts, editor config), so only your source code is sent. See the full <a href="../skipped-files/">skipped files reference</a> for details.</p>
+<hr />
+<h2 id="option-2-upload-a-zip-file">Option 2 - Upload a zip file</h2>
+<p>Shoal accepts a zip file of your project when you prefer to create the archive yourself.</p>
 <div class="admonition warning">
 <p class="admonition-title">Structure matters</p>
 <p>Your zip must contain your files directly at the root - <strong>not</strong> wrapped in a subfolder. Shoal expects to find your <code>Dockerfile</code> and source files immediately when it opens the zip.</p>
