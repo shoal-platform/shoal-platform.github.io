@@ -423,6 +423,62 @@
   
   
     <li class="md-nav__item">
+      <a href="../deploy-app-mongodb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deploy with MongoDB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploy-app-neon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deploy with Neon
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../deploy-app-scheduler/" class="md-nav__link">
         
   
@@ -511,6 +567,33 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../mcpservers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Connect Your AI (MCP)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -524,10 +607,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked="">
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   
@@ -545,8 +628,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1007,7 +1090,7 @@
 
 <h1 id="writing-a-dockerfile">Writing a Dockerfile</h1>
 <p>Shoal uses Docker to package and run your app in a container. A Dockerfile is a plain text file that describes how to do that - it tells Shoal what language runtime to use, how to install your dependencies, and how to start your app.</p>
-<p><strong>Without a Dockerfile, Shoal can't build your container.</strong> <em>(Support for automatic detection without a Dockerfile is coming soon.)</em></p>
+<p><strong>A Dockerfile is optional.</strong> If your project doesn't include one, Shoal automatically detects your stack and builds your container for you. Provide a Dockerfile when you want full control over how your app is built.</p>
 <h2 id="where-does-it-go">Where does it go?</h2>
 <p>The Dockerfile must be in the <strong>root of your project</strong> - the same top-level folder you're uploading or pointing your GitHub repo at.</p>
 <div class="highlight"><pre><span></span><code>my-project/

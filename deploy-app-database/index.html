@@ -9,7 +9,7 @@
         <link rel="prev" href="../deploy-app/">
       
       
-        <link rel="next" href="../deploy-app-scheduler/">
+        <link rel="next" href="../deploy-app-mongodb/">
       
       
         
@@ -527,6 +527,62 @@
   
   
     <li class="md-nav__item">
+      <a href="../deploy-app-mongodb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deploy with MongoDB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploy-app-neon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deploy with Neon
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../deploy-app-scheduler/" class="md-nav__link">
         
   
@@ -617,6 +673,33 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../mcpservers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Connect Your AI (MCP)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     
     
     
@@ -626,10 +709,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   
@@ -647,8 +730,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1083,11 +1166,11 @@
 <p>Drag a container node and a gateway node onto the canvas, then link them together. You can also add a comment box if you like.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/app1.png" data-desc-position="bottom"><img alt="Create App" src="../assets/screenshots/app1.png"></a></p>
 <h3 id="step-two">Step Two</h3>
-<p>Click the gateway node, open the <strong>Config</strong> tab, and enter the URL name you want. For example, entering <code>shopping-test</code> will make your app available at <code>shopping-test.eu1.shoal.live</code>. You can also point a custom domain at this address.</p>
+<p>Click the gateway node to open it, expand the <strong>Domain</strong> section, and enter the URL name you want. For example, entering <code>shopping-test</code> will make your app available at <code>shopping-test.eu1.shoal.live</code>. You can also point a custom domain at this address.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/app2.png" data-desc-position="bottom"><img alt="Create App" src="../assets/screenshots/app2.png"></a></p>
 <h3 id="step-three">Step Three</h3>
-<p>Click the container node, open the <strong>Config</strong> tab, and set up your source - either a GitHub repo or a file upload. You'll need a Dockerfile in your code.</p>
-<p>You can add the envirorment variables via the config on the container, or via the settings page on the actual environment.</p>
+<p>Click the container node to open it, expand the <strong>Source</strong> section, and set up your source - either a GitHub repo or a file upload. If your project includes a Dockerfile, Shoal builds from it; otherwise Shoal auto-detects your stack and builds it for you.</p>
+<p>You can add the environment variables via the container node's <strong>Env</strong> section, or via the settings page on the actual environment.</p>
 <p>Add any environment variables your app needs here. For example:</p>
 <div class="highlight"><pre><span></span><code>DATABASE_CONNECTION = postgresql://neondb_owner:password@server.aws.neon.tech/neondb?sslmode=require
 </code></pre></div>
