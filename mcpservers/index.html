@@ -1131,7 +1131,7 @@
 
 
 <h1 id="connect-your-ai-assistant-mcp">Connect Your AI Assistant (MCP)</h1>
-<p>Shoal runs a <strong>Model Context Protocol (MCP)</strong> server, so you can drive your Shoal platform straight from the AI assistant or editor you already use. Once connected, your assistant can browse blueprints, create projects and environments, set environment variables, and inspect your deployment graph - all as you, using a key you control.</p>
+<p>Shoal runs a <strong>Model Context Protocol (MCP)</strong> server, so you can drive your Shoal platform straight from the AI assistant or editor you already use. Once connected, your assistant can browse the shared blueprint templates, create your own projects and environments, set environment variables, and inspect your deployment graph - all as you, using a key you control.</p>
 <p>Any MCP-capable client works. This guide shows the eight most common ones. The setup is always the same three steps: <strong>create an API key</strong>, point your client at the <strong>server URL</strong>, and pass the key in the <strong><code>X-Api-Key</code></strong> header.</p>
 <h2 id="1-create-an-api-key">1. Create an API key</h2>
 <p>Your assistant authenticates to Shoal with an API key scoped to one of your spaces.</p>
@@ -1294,7 +1294,7 @@
 </div>
 </div>
 <h2 id="verify-it-works">Verify it works</h2>
-<p>Ask your assistant to <strong>list your Shoal blueprints</strong>. Behind the scenes that calls the read-only <code>list_blueprints</code> tool - if you get a list back, you're connected and ready to go. From there you can ask it to create a project, add an environment, set variables, and more.</p>
+<p>Ask your assistant to <strong>list the available Shoal blueprints</strong> - the shared, reusable templates on the platform. Behind the scenes that calls the read-only <code>list_blueprints</code> tool - if you get a list back, you're connected and ready to go. From there you can ask it to <strong>create a project</strong> of your own, add an environment, set variables, and more.</p>
 <div class="admonition tip">
 <p class="admonition-title">Not connecting?</p>
 <ul>
