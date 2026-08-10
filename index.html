@@ -342,6 +342,39 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#what-is-a-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is a function?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-database-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is a database node?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-about-multiple-services-or-routing-by-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What about multiple services, or routing by path?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#what-is-a-scheduler" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -368,6 +401,17 @@
     <span class="md-ellipsis">
       
         What's a project, and an environment?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-do-i-get-when-i-create-a-new-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What do I get when I create a new environment?
       
     </span>
   </a>
@@ -1180,6 +1224,39 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#what-is-a-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is a function?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-database-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is a database node?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-about-multiple-services-or-routing-by-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What about multiple services, or routing by path?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#what-is-a-scheduler" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1206,6 +1283,17 @@
     <span class="md-ellipsis">
       
         What's a project, and an environment?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-do-i-get-when-i-create-a-new-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What do I get when I create a new environment?
       
     </span>
   </a>
@@ -1253,12 +1341,23 @@
 <h3 id="what-is-a-dockerfile">What is a Dockerfile?</h3>
 <p>A Dockerfile is a simple text file that describes how to build your container. It lists the steps to set up your app - what base image to start from, what files to copy in, and what command to run. Think of it as a recipe: Shoal follows it to package your app into a container that's ready to deploy.</p>
 <p><em>You don't always need a Dockerfile - if your project doesn't include one, Shoal auto-detects your stack and builds it for you.</em></p>
+<h3 id="what-is-a-function">What is a function?</h3>
+<p>A function is a small piece of compute that runs on demand and scales to zero when idle, so you're not paying for a server that sits there waiting. It's a good fit for event-driven tasks and lightweight workloads - a webhook handler, an image resize, a one-off API endpoint. Point Shoal at your source and a gateway, same as a container, and it's live.</p>
+<p><em>See <a href="deploy-app-function/">Deploying a Function</a> for a full walkthrough.</em></p>
+<h3 id="what-is-a-database-node">What is a database node?</h3>
+<p>A database node provisions and manages a database for you and hands your app the connection details automatically - no connection strings to copy around by hand. Shoal currently supports two managed options: <strong>Neon</strong> (serverless Postgres that scales to zero) and <strong>MongoDB Atlas</strong> (managed MongoDB). Connect one to a container or function and its outputs map straight into your app's environment variables.</p>
+<p><em>See <a href="deploy-app-neon/">Deploying with Neon</a> and <a href="deploy-app-mongodb/">Deploying with MongoDB</a>.</em></p>
+<h3 id="what-about-multiple-services-or-routing-by-path">What about multiple services, or routing by path?</h3>
+<p>Bigger apps are often more than one service - an API, a worker, an admin panel - all living behind one domain. Connect several container or function nodes to the same gateway, and the gateway routes each request to the right one based on the URL path. You can also <strong>rewrite</strong> paths in transit, so a public path like <code>/accounts</code> can map to a completely different path on the service behind it.</p>
+<p><em>See <a href="deploy-app-multi/">Deploying with Multiple Containers</a> and <a href="path-routing/">Path-Based Routing</a>.</em></p>
 <h3 id="what-is-a-scheduler">What is a scheduler?</h3>
 <p>A scheduler runs tasks on a timer - like a cron job or a recurring reminder. If you need something to happen every night at midnight or every 5 minutes, a scheduler handles that for you without leaving a server running 24/7.</p>
 <h3 id="where-does-shoal-deploy">Where does Shoal deploy?</h3>
 <p>Shoal currently deploys into <strong>Google Cloud Platform (GCP)</strong>. Support for Azure, AWS, and other cloud providers is coming soon - and if you want full control, you'll be able to deploy into your own private infrastructure too.</p>
 <h3 id="whats-a-project-and-an-environment">What's a project, and an environment?</h3>
 <p>A <strong>project</strong> is a collection of services that belong together - your app, its database, maybe a background worker. An <strong>environment</strong> is a version of that project for a specific purpose: typically <code>development</code> (for testing changes) and <code>production</code> (the live version your users see). Changes in development don't affect production until you're ready.</p>
+<h3 id="what-do-i-get-when-i-create-a-new-environment">What do I get when I create a new environment?</h3>
+<p>Every new environment starts pre-wired with a starter app - a <strong>gateway</strong> already connected to a <strong>container</strong> - so there's something to deploy the moment you land on the canvas. If you uploaded source when creating it, that's pre-loaded onto the container (named "Welcome App") and you can hit <strong>Deploy</strong> straight away. If not, the container's there waiting for you to add your own source. It's just a starting point - delete or replace it any time.</p>
 
 
 
