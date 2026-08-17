@@ -6,8 +6,10 @@
       
       
       
-        <link rel="prev" href="../faq-deployment-failing/">
+        <link rel="prev" href="../deploy-app-multi/">
       
+      
+        <link rel="next" href="../path-routing/">
       
       
         
@@ -18,7 +20,7 @@
     
     
       
-        <title>Deploying a Private GitHub Repo - Shoal</title>
+        <title>Deploy a Virtual Machine - Shoal</title>
       
     
     
@@ -81,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#can-i-deploy-a-private-github-repo" class="md-skip">
+        <a href="#deploying-a-virtual-machine" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Deploying a Private GitHub Repo
+              Deploy a Virtual Machine
             
           </span>
         </div>
@@ -315,18 +317,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -347,7 +351,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -558,10 +562,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../deploy-app-vm/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deploy a Virtual Machine
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -577,6 +608,170 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#step-one-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step One: Domain
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-two-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step Two: Machine
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step Two: Machine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#container-optimized-os-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Container-Optimized OS + Docker Compose
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-three-boot-disk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step Three: Boot disk
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-four-ports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step Four: Ports
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-five-advanced-startup-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step Five: Advanced - startup script
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-six-ssh-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step Six: SSH Keys
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step Six: SSH Keys">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-keys-are-generated-and-stored" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How keys are generated and stored
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleting-saved-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deleting saved keys
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-seven-deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step Seven: Deploy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-to-your-vm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connecting to your VM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Done
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -648,20 +843,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -682,7 +875,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -977,19 +1170,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../faq-private-repo/" class="md-nav__link">
         
   
   
@@ -1005,7 +1189,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1038,6 +1221,158 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#step-one-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step One: Domain
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-two-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step Two: Machine
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step Two: Machine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#container-optimized-os-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Container-Optimized OS + Docker Compose
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-three-boot-disk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step Three: Boot disk
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-four-ports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step Four: Ports
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-five-advanced-startup-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step Five: Advanced - startup script
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-six-ssh-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step Six: SSH Keys
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step Six: SSH Keys">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-keys-are-generated-and-stored" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How keys are generated and stored
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleting-saved-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deleting saved keys
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-seven-deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step Seven: Deploy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-to-your-vm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connecting to your VM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Done
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1053,8 +1388,76 @@
 
 
 
-<h1 id="can-i-deploy-a-private-github-repo">Can I deploy a private GitHub repo?</h1>
-<p>Yes. When connecting a GitHub repo in the container node config, Shoal will prompt you to authorise access to your GitHub account. You can grant access to specific repositories - including private ones - without giving Shoal access to your entire account.</p>
+<h1 id="deploying-a-virtual-machine">Deploying a Virtual Machine</h1>
+<p>A <strong>VM node</strong> gives you a standalone virtual machine - a real GCE-backed VM you can SSH into, run a Docker Compose stack on, or boot a custom OS on. Unlike a container node, it doesn't need a gateway node to get a public address: every VM gets its own subdomain on <code>eu1-vm.shoal.live</code>.</p>
+<p>Drag a VM node onto the canvas, configure it, and deploy.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/vm-1.png" data-desc-position="bottom"><img alt="Create VM" src="../assets/screenshots/vm-1.png"></a></p>
+<h3 id="step-one-domain">Step One: Domain</h3>
+<p>Expand the <strong>Domain</strong> section and enter a subdomain. This is where your VM will be reachable, e.g. <code>my-vm</code> becomes <code>my-vm.eu1-vm.shoal.live</code>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/vm-2.png" data-desc-position="bottom"><img alt="Domain" src="../assets/screenshots/vm-2.png"></a></p>
+<h3 id="step-two-machine">Step Two: Machine</h3>
+<p>Expand the <strong>Machine</strong> section and configure:</p>
+<ul>
+<li><strong>Machine type</strong> - <code>e2-micro</code>, <code>e2-small</code>, <code>e2-medium</code>, <code>e2-standard-2</code>, <code>e2-standard-4</code>, <code>e2-standard-8</code> (vCPU/memory scale up the list).</li>
+<li><strong>OS image</strong> - Debian 11/12, Ubuntu 22.04/24.04 LTS, or Container-Optimized OS (<code>cos-cloud</code>, stable/beta, amd64/arm64).</li>
+<li><strong>Region</strong> - the GCP region the VM runs in.</li>
+<li><strong>Status</strong> - <code>RUNNING</code>, <code>SUSPENDED</code>, or <code>TERMINATED</code>. This is the desired state Shoal reconciles the VM to.</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/vm-3.png" data-desc-position="bottom"><img alt="Machine config" src="../assets/screenshots/vm-3.png"></a></p>
+<div class="admonition warning">
+<p class="admonition-title">Changing the OS image is destructive</p>
+<p>Switching OS image after the VM has been created wipes the machine on next redeploy - it's a fresh boot disk, not an in-place upgrade.</p>
+</div>
+<h4 id="container-optimized-os-docker-compose">Container-Optimized OS + Docker Compose</h4>
+<p>If you pick a <code>cos-cloud</code> image, a <strong>Docker Compose</strong> field appears. Paste (or upload) a <code>docker-compose.yml</code> and Shoal runs it on boot - no manual <code>docker compose up</code> needed.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/vm-4.png" data-desc-position="bottom"><img alt="Docker Compose source" src="../assets/screenshots/vm-4.png"></a></p>
+<h3 id="step-three-boot-disk">Step Three: Boot disk</h3>
+<ul>
+<li><strong>Disk type</strong> - <code>pd-standard</code>, <code>pd-balanced</code>, <code>pd-ssd</code>, <code>pd-extreme</code>, or the <code>hyperdisk-*</code> variants.</li>
+<li><strong>Disk size (GB)</strong> - minimum 10 GB.</li>
+<li><strong>Scratch disk</strong> - optional local SSD scratch disk.</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/vm-5.png" data-desc-position="bottom"><img alt="Boot disk" src="../assets/screenshots/vm-5.png"></a></p>
+<h3 id="step-four-ports">Step Four: Ports</h3>
+<p>Open the firewall for the protocols/ports your VM needs. Quick-add buttons cover SSH (22), HTTP (80), and HTTPS (443); add custom rows for anything else. Supported protocols: TCP, UDP, ICMP, ESP, AH, SCTP.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/vm-6.png" data-desc-position="bottom"><img alt="Ports" src="../assets/screenshots/vm-6.png"></a></p>
+<h3 id="step-five-advanced-startup-script">Step Five: Advanced - startup script</h3>
+<p>Expand <strong>Advanced</strong> to write a startup script (a bash script, equivalent to a GCE <code>startup-script</code>) that runs once on boot.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/vm-7.png" data-desc-position="bottom"><img alt="Startup script" src="../assets/screenshots/vm-7.png"></a></p>
+<h3 id="step-six-ssh-keys">Step Six: SSH Keys</h3>
+<p>Expand <strong>SSH Keys</strong> and either generate a new keypair in-browser, add your own existing key pair, or reuse a key you've already saved in this browser. You can add multiple named keys to a single VM.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/vm-8.png" data-desc-position="bottom"><img alt="SSH keys" src="../assets/screenshots/vm-8.png"></a></p>
+<h4 id="how-keys-are-generated-and-stored">How keys are generated and stored</h4>
+<ul>
+<li>New key pairs are generated <strong>in your browser</strong> (Ed25519, via the Web Crypto API). The private key is never sent to Shoal's servers - only the public key is saved, as an authorized key on the VM.</li>
+<li>When a new pair is generated, you get one chance to keep the private key: copy it, download it as a <code>.pem</code> file, or check <strong>"Save to browser, encrypted with a passphrase."</strong> If you close the dialog without doing one of these, the private key is gone for good - it cannot be regenerated or recovered, and the VM will still trust the (now-orphaned) public key.</li>
+<li>Checking "Save to browser" the first time prompts you to set a <strong>vault passphrase</strong>. This passphrase encrypts the private key (AES-GCM, PBKDF2-derived) before it's written to your browser's local storage. Shoal never sees the passphrase or the decrypted key.</li>
+<li>The passphrase is <strong>per-browser</strong>, not per-VM or per-key - one passphrase unlocks every saved key across every space, project, and environment in that browser. It only exists on the device you set it on; there's no server-side backup or cross-device sync, and no "forgot passphrase" recovery. Losing it means losing every key saved under it.</li>
+</ul>
+<h4 id="deleting-saved-keys">Deleting saved keys</h4>
+<ul>
+<li><strong>A single saved key</strong> - reopen the SSH Keys dialog, find it under "Saved keys," and click the ✕ next to it. This deletes only that private key from your browser's local vault; it does <strong>not</strong> remove the matching public key from any VM's authorized keys (do that from the node's SSH Keys list instead, via its own remove action).</li>
+<li><strong>Every key saved in a space</strong> - go to the space's <strong>Settings → SSH Keys</strong>, and use <strong>"Delete all SSH keys in this space."</strong> This clears the vault entries scoped to that space <em>and</em> strips the matching public keys off every VM in it.</li>
+<li><strong>Reset your vault passphrase entirely</strong> - same Settings page, <strong>"Reset passphrase."</strong> This wipes <strong>every</strong> saved key in that browser, across all spaces/projects/environments, not just the current one - use it if you've forgotten the passphrase. You'll be prompted to set a new one next time you save a key.</li>
+</ul>
+<p>All three actions are irreversible.</p>
+<h3 id="step-seven-deploy">Step Seven: Deploy</h3>
+<p>Press <strong>Deploy</strong>. You can watch progress via the <strong>Observability</strong> menu.</p>
+<h3 id="connecting-to-your-vm">Connecting to your VM</h3>
+<p>Once deployed, there are two ways in:</p>
+<ul>
+<li><strong>In-browser terminal</strong> - open the SSH command dialog on the node and connect straight from the browser. No local SSH client needed.</li>
+<li><strong>Your own SSH client:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code>ssh -i ~/.ssh/&lt;keyname&gt; &lt;user&gt;@&lt;subdomain&gt;.eu1-vm.shoal.live
+</code></pre></div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/vm-ssh.png" data-desc-position="bottom"><img alt="SSH connect" src="../assets/screenshots/vm-ssh.png"></a></p>
+<h3 id="done">Done</h3>
+<p>Your VM is live at <code>&lt;subdomain&gt;.eu1-vm.shoal.live</code>, reachable by SSH, and running whatever you configured - a bare OS, or a Docker Compose stack on Container-Optimized OS.</p>
+<div class="admonition note">
+<p class="admonition-title">Trial plan limits</p>
+<p>On a trial plan, VM machine type is capped to <code>e2-micro</code>/<code>e2-small</code>, boot disk type to <code>pd-standard</code>, and boot disk size to 10 GB.</p>
+</div>
 
 
 
