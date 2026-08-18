@@ -6,10 +6,10 @@
       
       
       
-        <link rel="prev" href="../deploy-app-multi/">
+        <link rel="prev" href="../deploy-app-function/">
       
       
-        <link rel="next" href="../path-routing/">
+        <link rel="next" href="../deploy-app-multi/">
       
       
         
@@ -20,7 +20,7 @@
     
     
       
-        <title>Deploy a Virtual Machine - Shoal</title>
+        <title>Deploy with a Message Queue - Shoal</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#deploying-a-virtual-machine" class="md-skip">
+        <a href="#deploying-an-application-with-a-message-queue" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Deploy a Virtual Machine
+              Deploy with a Message Queue
             
           </span>
         </div>
@@ -534,10 +534,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../deploy-app-message-queue/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deploy with a Message Queue
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -553,6 +580,170 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#example-a-delivery-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example - a delivery app
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-one-configure-the-message-queue-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step One - Configure the message queue node
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-two-configure-the-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step Two - Configure the nodes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step Two - Configure the nodes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-producer-and-the-consumer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The producer and the consumer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-frontend-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The frontend dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The database
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-three-configure-the-edges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step Three - Configure the edges
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step Three - Configure the edges">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connect-the-gateway-to-the-containers-with-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connect the gateway to the containers with paths
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connect-the-message-queue-to-the-producer-and-the-consumer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connect the message queue to the producer and the consumer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connect-the-collector-to-the-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connect the collector to the database
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-four-deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step Four - Deploy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Done
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -590,37 +781,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Deploy a Virtual Machine
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../deploy-app-vm/" class="md-nav__link">
         
   
   
@@ -636,170 +800,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#step-one-domain" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step One: Domain
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-two-machine" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step Two: Machine
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Step Two: Machine">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#container-optimized-os-docker-compose" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Container-Optimized OS + Docker Compose
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-three-boot-disk" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step Three: Boot disk
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-four-ports" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step Four: Ports
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-five-advanced-startup-script" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step Five: Advanced - startup script
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-six-ssh-keys" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step Six: SSH Keys
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Step Six: SSH Keys">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#how-keys-are-generated-and-stored" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How keys are generated and stored
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#deleting-saved-keys" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Deleting saved keys
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-seven-deploy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step Seven: Deploy
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#connecting-to-your-vm" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Connecting to your VM
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#done" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Done
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1256,10 +1256,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#step-one-domain" class="md-nav__link">
+  <a href="#example-a-delivery-app" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step One: Domain
+        Example - a delivery app
       
     </span>
   </a>
@@ -1267,22 +1267,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-two-machine" class="md-nav__link">
+  <a href="#step-one-configure-the-message-queue-node" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step Two: Machine
+        Step One - Configure the message queue node
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Step Two: Machine">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-two-configure-the-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step Two - Configure the nodes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step Two - Configure the nodes">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#container-optimized-os-docker-compose" class="md-nav__link">
+  <a href="#the-producer-and-the-consumer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Container-Optimized OS + Docker Compose
+        The producer and the consumer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-frontend-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The frontend dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The database
       
     </span>
   </a>
@@ -1295,55 +1328,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-three-boot-disk" class="md-nav__link">
+  <a href="#step-three-configure-the-edges" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step Three: Boot disk
+        Step Three - Configure the edges
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-four-ports" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step Four: Ports
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-five-advanced-startup-script" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step Five: Advanced - startup script
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-six-ssh-keys" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step Six: SSH Keys
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Step Six: SSH Keys">
+    <nav class="md-nav" aria-label="Step Three - Configure the edges">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#how-keys-are-generated-and-stored" class="md-nav__link">
+  <a href="#connect-the-gateway-to-the-containers-with-paths" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How keys are generated and stored
+        Connect the gateway to the containers with paths
       
     </span>
   </a>
@@ -1351,10 +1351,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#deleting-saved-keys" class="md-nav__link">
+  <a href="#connect-the-message-queue-to-the-producer-and-the-consumer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Deleting saved keys
+        Connect the message queue to the producer and the consumer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connect-the-collector-to-the-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connect the collector to the database
       
     </span>
   </a>
@@ -1367,21 +1378,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-seven-deploy" class="md-nav__link">
+  <a href="#step-four-deploy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step Seven: Deploy
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#connecting-to-your-vm" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Connecting to your VM
+        Step Four - Deploy
       
     </span>
   </a>
@@ -1416,76 +1416,272 @@
 
 
 
-<h1 id="deploying-a-virtual-machine">Deploying a Virtual Machine</h1>
-<p>A <strong>VM node</strong> gives you a standalone virtual machine - a real GCE-backed VM you can SSH into, run a Docker Compose stack on, or boot a custom OS on. Unlike a container node, it doesn't need a gateway node to get a public address: every VM gets its own subdomain on <code>eu1-vm.shoal.live</code>.</p>
-<p>Drag a VM node onto the canvas, configure it, and deploy.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/vm-1.png" data-desc-position="bottom"><img alt="Create VM" src="../assets/screenshots/vm-1.png"></a></p>
-<h3 id="step-one-domain">Step One: Domain</h3>
-<p>Expand the <strong>Domain</strong> section and enter a subdomain. This is where your VM will be reachable, e.g. <code>my-vm</code> becomes <code>my-vm.eu1-vm.shoal.live</code>.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/vm-2.png" data-desc-position="bottom"><img alt="Domain" src="../assets/screenshots/vm-2.png"></a></p>
-<h3 id="step-two-machine">Step Two: Machine</h3>
-<p>Expand the <strong>Machine</strong> section and configure:</p>
+<h1 id="deploying-an-application-with-a-message-queue">Deploying an Application with a Message Queue</h1>
+<p>In this example, we have an application that accepts orders over HTTP, queues them, and writes them to a database from a separate worker. The queue sits between the two, so the checkout request returns in milliseconds and orders keep flowing even while the database is slow or unavailable.</p>
+<p>You need six components: three <strong>container nodes</strong>, a <strong>gateway node</strong>, a <strong>message queue node</strong>, and a <strong>Neon node</strong>.</p>
 <ul>
-<li><strong>Machine type</strong> - <code>e2-micro</code>, <code>e2-small</code>, <code>e2-medium</code>, <code>e2-standard-2</code>, <code>e2-standard-4</code>, <code>e2-standard-8</code> (vCPU/memory scale up the list).</li>
-<li><strong>OS image</strong> - Debian 11/12, Ubuntu 22.04/24.04 LTS, or Container-Optimized OS (<code>cos-cloud</code>, stable/beta, amd64/arm64).</li>
-<li><strong>Region</strong> - the GCP region the VM runs in.</li>
-<li><strong>Status</strong> - <code>RUNNING</code>, <code>SUSPENDED</code>, or <code>TERMINATED</code>. This is the desired state Shoal reconciles the VM to.</li>
+<li><strong>Message queue node</strong> - creates the topic your producer publishes to, and the subscriptions your consumers read from.</li>
+<li><strong>Container nodes</strong> - one producer, one consumer, and one frontend, each linked to its own source code.</li>
+<li><strong>Gateway node</strong> - the single domain your users hit, routing each path to the right container.</li>
+<li><strong>Neon node</strong> - the serverless Postgres database the consumer writes into.</li>
 </ul>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/vm-3.png" data-desc-position="bottom"><img alt="Machine config" src="../assets/screenshots/vm-3.png"></a></p>
-<div class="admonition warning">
-<p class="admonition-title">Changing the OS image is destructive</p>
-<p>Switching OS image after the VM has been created wipes the machine on next redeploy - it's a fresh boot disk, not an in-place upgrade.</p>
+<p>Hit deploy, and it just works.</p>
+<div class="admonition tip">
+<p class="admonition-title">Skip the setup - use the blueprint</p>
+<p>This whole graph is published as a ready-made blueprint: <a href="https://app.shoalstack.com/blueprints/bc3a1979-0b6e-4487-a43b-2173590218e0">Order Queue - Producer, Consumer &amp; Dashboard</a>. Open it, set your gateway domain and database, and press <strong>Deploy</strong> - every node, path, and output mapping described below is already wired up.</p>
+<p>Prefer to build it yourself, or want to understand what the blueprint does? Follow the steps on this page.</p>
 </div>
-<h4 id="container-optimized-os-docker-compose">Container-Optimized OS + Docker Compose</h4>
-<p>If you pick a <code>cos-cloud</code> image, a <strong>Docker Compose</strong> field appears. Paste (or upload) a <code>docker-compose.yml</code> and Shoal runs it on boot - no manual <code>docker compose up</code> needed.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/vm-4.png" data-desc-position="bottom"><img alt="Docker Compose source" src="../assets/screenshots/vm-4.png"></a></p>
-<h3 id="step-three-boot-disk">Step Three: Boot disk</h3>
-<ul>
-<li><strong>Disk type</strong> - <code>pd-standard</code>, <code>pd-balanced</code>, <code>pd-ssd</code>, <code>pd-extreme</code>, or the <code>hyperdisk-*</code> variants.</li>
-<li><strong>Disk size (GB)</strong> - minimum 10 GB.</li>
-<li><strong>Scratch disk</strong> - optional local SSD scratch disk.</li>
-</ul>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/vm-5.png" data-desc-position="bottom"><img alt="Boot disk" src="../assets/screenshots/vm-5.png"></a></p>
-<h3 id="step-four-ports">Step Four: Ports</h3>
-<p>Open the firewall for the protocols/ports your VM needs. Quick-add buttons cover SSH (22), HTTP (80), and HTTPS (443); add custom rows for anything else. Supported protocols: TCP, UDP, ICMP, ESP, AH, SCTP.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/vm-6.png" data-desc-position="bottom"><img alt="Ports" src="../assets/screenshots/vm-6.png"></a></p>
-<h3 id="step-five-advanced-startup-script">Step Five: Advanced - startup script</h3>
-<p>Expand <strong>Advanced</strong> to write a startup script (a bash script, equivalent to a GCE <code>startup-script</code>) that runs once on boot.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/vm-7.png" data-desc-position="bottom"><img alt="Startup script" src="../assets/screenshots/vm-7.png"></a></p>
-<h3 id="step-six-ssh-keys">Step Six: SSH Keys</h3>
-<p>Expand <strong>SSH Keys</strong> and either generate a new keypair in-browser, add your own existing key pair, or reuse a key you've already saved in this browser. You can add multiple named keys to a single VM.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/vm-8.png" data-desc-position="bottom"><img alt="SSH keys" src="../assets/screenshots/vm-8.png"></a></p>
-<h4 id="how-keys-are-generated-and-stored">How keys are generated and stored</h4>
-<ul>
-<li>New key pairs are generated <strong>in your browser</strong> (Ed25519, via the Web Crypto API). The private key is never sent to Shoal's servers - only the public key is saved, as an authorized key on the VM.</li>
-<li>When a new pair is generated, you get one chance to keep the private key: copy it, download it as a <code>.pem</code> file, or check <strong>"Save to browser, encrypted with a passphrase."</strong> If you close the dialog without doing one of these, the private key is gone for good - it cannot be regenerated or recovered, and the VM will still trust the (now-orphaned) public key.</li>
-<li>Checking "Save to browser" the first time prompts you to set a <strong>vault passphrase</strong>. This passphrase encrypts the private key (AES-GCM, PBKDF2-derived) before it's written to your browser's local storage. Shoal never sees the passphrase or the decrypted key.</li>
-<li>The passphrase is <strong>per-browser</strong>, not per-VM or per-key - one passphrase unlocks every saved key across every space, project, and environment in that browser. It only exists on the device you set it on; there's no server-side backup or cross-device sync, and no "forgot passphrase" recovery. Losing it means losing every key saved under it.</li>
-</ul>
-<h4 id="deleting-saved-keys">Deleting saved keys</h4>
-<ul>
-<li><strong>A single saved key</strong> - reopen the SSH Keys dialog, find it under "Saved keys," and click the ✕ next to it. This deletes only that private key from your browser's local vault; it does <strong>not</strong> remove the matching public key from any VM's authorized keys (do that from the node's SSH Keys list instead, via its own remove action).</li>
-<li><strong>Every key saved in a space</strong> - go to the space's <strong>Settings → SSH Keys</strong>, and use <strong>"Delete all SSH keys in this space."</strong> This clears the vault entries scoped to that space <em>and</em> strips the matching public keys off every VM in it.</li>
-<li><strong>Reset your vault passphrase entirely</strong> - same Settings page, <strong>"Reset passphrase."</strong> This wipes <strong>every</strong> saved key in that browser, across all spaces/projects/environments, not just the current one - use it if you've forgotten the passphrase. You'll be prompted to set a new one next time you save a key.</li>
-</ul>
-<p>All three actions are irreversible.</p>
-<h3 id="step-seven-deploy">Step Seven: Deploy</h3>
-<p>Press <strong>Deploy</strong>. You can watch progress via the <strong>Observability</strong> menu.</p>
-<h3 id="connecting-to-your-vm">Connecting to your VM</h3>
-<p>Once deployed, there are two ways in:</p>
-<ul>
-<li><strong>In-browser terminal</strong> - open the SSH command dialog on the node and connect straight from the browser. No local SSH client needed.</li>
-<li><strong>Your own SSH client:</strong></li>
-</ul>
-<div class="highlight"><pre><span></span><code>ssh -i ~/.ssh/&lt;keyname&gt; &lt;user&gt;@&lt;subdomain&gt;.eu1-vm.shoal.live
-</code></pre></div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/vm-ssh.png" data-desc-position="bottom"><img alt="SSH connect" src="../assets/screenshots/vm-ssh.png"></a></p>
-<h3 id="done">Done</h3>
-<p>Your VM is live at <code>&lt;subdomain&gt;.eu1-vm.shoal.live</code>, reachable by SSH, and running whatever you configured - a bare OS, or a Docker Compose stack on Container-Optimized OS.</p>
+<div class="admonition info">
+<p class="admonition-title">Example source code</p>
+<p>The three services used on this page are in the <a href="https://github.com/shoal-platform/message-queue-demo">message-queue-demo repository</a>. Clone it, upload each folder as its own container source, and follow the steps below.</p>
+</div>
+<hr>
+<h2 id="example-a-delivery-app">Example - a delivery app</h2>
+<p>Customers place orders on a dashboard. Rather than writing straight to the database, the order service publishes each accepted order to a topic and replies immediately. A collector subscribes to that topic and does the database work in its own time.</p>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Responsibility</th>
+<th>Talks to</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>order-service</code></td>
+<td>Validates an order and publishes it to the topic</td>
+<td>Message queue (topic)</td>
+</tr>
+<tr>
+<td><code>order-collector</code></td>
+<td>Subscribes to the queue and inserts orders into Postgres</td>
+<td>Message queue (subscription), Neon</td>
+</tr>
+<tr>
+<td><code>delivery-dashboard</code></td>
+<td>Serves the frontend that places orders and lists them in real time</td>
+<td>Nothing - the browser calls the other two through the gateway</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Why put a queue in the middle?</p>
+<p>The producer never waits for the database. If the collector is redeploying, scaled to zero, or the database is under load, messages simply wait in the queue and are delivered when the consumer is ready. Nothing is lost, and checkout stays fast.</p>
+</div>
+<hr>
+<h2 id="step-one-configure-the-message-queue-node">Step One - Configure the message queue node</h2>
+<p>Drag a <strong>message queue node</strong> onto the canvas and open it.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/mq-01-queue-config.png" data-desc-position="bottom"><img alt="Message queue node configuration" src="../assets/screenshots/mq-01-queue-config.png"></a></p>
+<p>The node has two parts:</p>
+<p><strong>Topic</strong> - where producers publish. Set <strong>Retention</strong> to how long an unacknowledged message should be kept - <code>7 days</code> is a sensible default and is the maximum on most setups.</p>
+<p><strong>Subscriptions</strong> - where consumers read. Click <strong>Add subscription</strong> and give it a name; in this example it is <code>orders-collector</code>. Each consumer should have its own subscription, because every subscription gets its own copy of every message.</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What it does</th>
+<th>Value used here</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Delivery</td>
+<td><code>Pull</code> lets the consumer fetch messages itself. <code>Push</code> posts them to an HTTP endpoint instead.</td>
+<td><code>Pull</code></td>
+</tr>
+<tr>
+<td>Ack deadline</td>
+<td>Seconds the consumer has to acknowledge a message before it is redelivered. Raise it if your processing is slow.</td>
+<td><code>30</code></td>
+</tr>
+<tr>
+<td>Retention</td>
+<td>How long undelivered messages are kept in the subscription.</td>
+<td><code>7 days</code></td>
+</tr>
+<tr>
+<td>Filter</td>
+<td>Optional expression so this subscription only receives matching messages, for example <code>attributes.type = "order"</code>.</td>
+<td><em>(empty)</em></td>
+</tr>
+<tr>
+<td>Retain acked messages</td>
+<td>Keeps messages after acknowledgement so you can replay them.</td>
+<td>Off</td>
+</tr>
+<tr>
+<td>Ordered delivery</td>
+<td>Delivers messages with the same ordering key in order. Costs throughput.</td>
+<td>Off</td>
+</tr>
+<tr>
+<td>Exactly once delivery</td>
+<td>Guarantees a message is not delivered again after a successful acknowledgement.</td>
+<td>Off</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Design for redelivery</p>
+<p>Unless you enable <strong>Exactly once delivery</strong>, a message can be delivered more than once - for example if a consumer crashes before acknowledging. Make your writes idempotent. The example collector inserts with <code>ON CONFLICT (id) DO NOTHING</code>, so a redelivered order is stored exactly once.</p>
+</div>
+<hr>
+<h2 id="step-two-configure-the-nodes">Step Two - Configure the nodes</h2>
+<h3 id="the-producer-and-the-consumer">The producer and the consumer</h3>
+<p>Drag two container nodes onto the canvas for <code>order-service</code> and <code>order-collector</code>. Open each one, expand <strong>Source</strong>, and point it at your GitHub repo or upload the service folder. Set <strong>Port</strong> to <code>8080</code> for both.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/mq-02-service-nodes.png" data-desc-position="bottom"><img alt="Order service and order collector container nodes" src="../assets/screenshots/mq-02-service-nodes.png"></a></p>
+<p>Neither service needs its topic or subscription id typed in by hand - you map those from the queue node in Step Three.</p>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Environment variable</th>
+<th>Value comes from</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>order-service</code></td>
+<td><code>ORDERS_TOPIC_ID</code></td>
+<td>Message queue - Topic ID</td>
+</tr>
+<tr>
+<td><code>order-service</code></td>
+<td><code>GCP_PROJECT_ID</code></td>
+<td>Message queue - GCP Project ID</td>
+</tr>
+<tr>
+<td><code>order-collector</code></td>
+<td><code>ORDERS_SUBSCRIPTION_ID</code></td>
+<td>Message queue - Sub: <code>orders-collector</code></td>
+</tr>
+<tr>
+<td><code>order-collector</code></td>
+<td><code>GCP_PROJECT_ID</code></td>
+<td>Message queue - GCP Project ID</td>
+</tr>
+<tr>
+<td><code>order-collector</code></td>
+<td><code>DATABASE_URL</code></td>
+<td>Neon - Connection String</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-frontend-dashboard">The frontend dashboard</h3>
+<p>Drag a third container node for <code>delivery-dashboard</code> and configure its source the same way. It serves static files only - no environment variables, no queue access.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/mq-03-dashboard-node.png" data-desc-position="bottom"><img alt="Delivery dashboard container node" src="../assets/screenshots/mq-03-dashboard-node.png"></a></p>
+<p>The page posts new orders to <code>/api/checkout</code> and polls <code>/api/orders</code> every ten seconds, so orders appear in the list moments after the collector has written them. Both of those paths are provided by the gateway in Step Three, which is why the dashboard needs no knowledge of the other services.</p>
+<h3 id="the-database">The database</h3>
+<p>Drag a <strong>Neon node</strong> onto the canvas, click <strong>Set up Database</strong>, and either select an existing project or choose <strong>Create on deployment</strong>. See the <a href="../deploy-app-neon/">Neon guide</a> for the full walkthrough of that dialog.</p>
+<p>The collector creates its own <code>orders</code> table on first start, so there is no migration step to run.</p>
 <div class="admonition note">
-<p class="admonition-title">Trial plan limits</p>
-<p>On a trial plan, VM machine type is capped to <code>e2-micro</code>/<code>e2-small</code>, boot disk type to <code>pd-standard</code>, and boot disk size to 10 GB.</p>
+<p class="admonition-title">Using Cloud SQL instead</p>
+<p>Any Postgres works here. If you prefer a managed instance over serverless, drop a database node on the canvas instead and map its connection string to the same <code>DATABASE_URL</code> variable - the service code does not change. See <a href="../deploy-app-database/">deploying with a database</a>.</p>
 </div>
+<hr>
+<h2 id="step-three-configure-the-edges">Step Three - Configure the edges</h2>
+<h3 id="connect-the-gateway-to-the-containers-with-paths">Connect the gateway to the containers with paths</h3>
+<p>Link all three containers to the gateway node, then double-click each connection to set its path mapping.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/mq-04-gateway-paths.png" data-desc-position="bottom"><img alt="Gateway path mappings for the three containers" src="../assets/screenshots/mq-04-gateway-paths.png"></a></p>
+<table>
+<thead>
+<tr>
+<th>Connection</th>
+<th>IN</th>
+<th>OUT</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gateway -&gt; Delivery Dashboard</td>
+<td><code>/</code></td>
+<td><code>/</code></td>
+<td>Catch-all: serves the frontend</td>
+</tr>
+<tr>
+<td>Gateway -&gt; Order Service</td>
+<td><code>/api/checkout</code></td>
+<td><code>/</code></td>
+<td>Browser checkout calls reach the producer's <code>POST /</code></td>
+</tr>
+<tr>
+<td>Gateway -&gt; Order Collector</td>
+<td><code>/api/orders</code></td>
+<td><code>/</code></td>
+<td>The dashboard's order list reads the consumer's <code>GET /</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>IN</strong> is the path your users hit on the gateway; <strong>OUT</strong> is the path the container actually listens on. More specific paths always win over <code>/</code>, so the two <code>/api/</code> routes take priority over the dashboard's catch-all. See <a href="../path-routing/">path-based routing</a> for more detail.</p>
+<p>Open the gateway node's <strong>Domain</strong> section and enter the URL name you want - for example <code>delivery-demo</code>, giving you <code>delivery-demo.eu1.shoal.live</code>.</p>
+<h3 id="connect-the-message-queue-to-the-producer-and-the-consumer">Connect the message queue to the producer and the consumer</h3>
+<p>Link the message queue node to both service containers. Each connection carries an <strong>Output</strong> panel where you map queue values onto environment variables.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/mq-05-output-mappings.png" data-desc-position="bottom"><img alt="Output mappings from the queue and Neon onto the containers" src="../assets/screenshots/mq-05-output-mappings.png"></a></p>
+<p>On the <strong>queue -&gt; order-service</strong> connection, add two mappings:</p>
+<table>
+<thead>
+<tr>
+<th>Output</th>
+<th>Environment variable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Topic ID</td>
+<td><code>ORDERS_TOPIC_ID</code></td>
+</tr>
+<tr>
+<td>GCP Project ID</td>
+<td><code>GCP_PROJECT_ID</code></td>
+</tr>
+</tbody>
+</table>
+<p>On the <strong>queue -&gt; order-collector</strong> connection, map the subscription rather than the topic:</p>
+<table>
+<thead>
+<tr>
+<th>Output</th>
+<th>Environment variable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sub: <code>orders-collector</code></td>
+<td><code>ORDERS_SUBSCRIPTION_ID</code></td>
+</tr>
+<tr>
+<td>GCP Project ID</td>
+<td><code>GCP_PROJECT_ID</code></td>
+</tr>
+</tbody>
+</table>
+<p>If you added several subscriptions in Step One, the dropdown lists each one - pick the subscription belonging to the consumer on that connection.</p>
+<h3 id="connect-the-collector-to-the-database">Connect the collector to the database</h3>
+<p>Link the Neon node to the <code>order-collector</code> container and map its output:</p>
+<table>
+<thead>
+<tr>
+<th>Output</th>
+<th>Environment variable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Connection String</td>
+<td><code>DATABASE_URL</code></td>
+</tr>
+</tbody>
+</table>
+<p>Only the collector touches the database. The producer and the dashboard have no connection to Neon at all, which is the point of the queue.</p>
+<p>You can manage environment variables from each container node's <strong>Env</strong> section, or from the environment settings page. See the <a href="../faq-env-vars/">environment variables guide</a> for more detail.</p>
+<hr>
+<h2 id="step-four-deploy">Step Four - Deploy</h2>
+<p>Press <strong>Deploy</strong>. You can watch the deployment in real time via the <strong>Observability</strong> menu, or by clicking the link on the deploy button.</p>
+<p>Once your graph is working, you can share it with others by pressing <strong>Publish Blueprint</strong> - which is exactly how the <a href="https://app.shoalstack.com/blueprints/bc3a1979-0b6e-4487-a43b-2173590218e0">blueprint linked at the top of this page</a> was made.</p>
+<h2 id="done">Done</h2>
+<p>Open your gateway address and place an order. The dashboard confirms it immediately - that response comes from the producer as soon as the message is queued - and the order appears in the list a moment later, once the collector has consumed it from the subscription and written it to Neon.</p>
+<p>To see the queue doing its job, pause or redeploy the collector and keep placing orders. Checkout carries on working, and every queued order lands in the database as soon as the collector is back.</p>
 
 
 
