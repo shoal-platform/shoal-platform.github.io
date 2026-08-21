@@ -6,10 +6,10 @@
       
       
       
-        <link rel="prev" href="../deploy-app-vm/">
+        <link rel="prev" href="../deploy-app-neon/">
       
       
-        <link rel="next" href="../mcpservers/">
+        <link rel="next" href="../deploy-app-scheduler/">
       
       
         
@@ -20,7 +20,7 @@
     
     
       
-        <title>Path-Based Routing - Shoal</title>
+        <title>Deploy with Cloud SQL - Shoal</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#path-based-routing" class="md-skip">
+        <a href="#deploying-an-application-with-cloud-sql" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Path-Based Routing
+              Deploy with Cloud SQL
             
           </span>
         </div>
@@ -478,10 +478,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../deploy-app-cloudsql/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deploy with Cloud SQL
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -497,6 +524,103 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#step-one" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step One
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-two" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step Two
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-three" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step Three
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-four" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step Four
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-five" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step Five
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-six" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step Six
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Done
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -646,37 +770,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Path-Based Routing
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../path-routing/" class="md-nav__link">
         
   
   
@@ -692,59 +789,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#default-no-rewrite" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Default: no rewrite
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rewriting-to-a-fixed-path" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Rewriting to a fixed path
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rewriting-into-a-nested-service-path" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Rewriting into a nested service path
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1173,10 +1217,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#default-no-rewrite" class="md-nav__link">
+  <a href="#step-one" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Default: no rewrite
+        Step One
       
     </span>
   </a>
@@ -1184,10 +1228,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rewriting-to-a-fixed-path" class="md-nav__link">
+  <a href="#step-two" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Rewriting to a fixed path
+        Step Two
       
     </span>
   </a>
@@ -1195,10 +1239,54 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rewriting-into-a-nested-service-path" class="md-nav__link">
+  <a href="#step-three" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Rewriting into a nested service path
+        Step Three
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-four" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step Four
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-five" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step Five
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-six" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step Six
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Done
       
     </span>
   </a>
@@ -1222,21 +1310,93 @@
 
 
 
-<h1 id="path-based-routing">Path-Based Routing</h1>
-<p>By default a gateway forwards requests straight through to whatever path they came in on. <strong>Path routing</strong> lets you decouple the path your users hit on the gateway from the path your service actually listens on - so you can point multiple paths at one service, or expose a service that lives deep under its own path prefix, without changing your app's code.</p>
-<p>You configure this on the connector between the <strong>gateway node</strong> and the <strong>container node</strong>: a <strong>Path</strong> field, and an optional <strong>Rewrite</strong> field.</p>
-<h2 id="default-no-rewrite">Default: no rewrite</h2>
-<p>In the simplest case, the service listens on <code>/</code>. Hit the gateway, and the request routes straight through to <code>/</code> on the service - no rewriting involved.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/path-routing-1.png" data-desc-position="bottom"><img alt="Gateway connected to a container with a path field and optional rewrite" src="../assets/screenshots/path-routing-1.png"></a></p>
-<h2 id="rewriting-to-a-fixed-path">Rewriting to a fixed path</h2>
-<p>You can also rewrite the incoming path. Leave <strong>Path</strong> as <code>/</code>, but set <strong>Rewrite</strong> to <code>/accounts</code>, and every request to <code>/accounts</code> on the gateway is routed to <code>/</code> on the service.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/path-routing-2.png" data-desc-position="bottom"><img alt="Connector panel with Path set to / and Rewrite set to /accounts" src="../assets/screenshots/path-routing-2.png"></a></p>
-<p><em>Requests to <code>https://&lt;gateway&gt;/accounts</code> on the gateway are routed to <code>/</code> on the service.</em></p>
-<h2 id="rewriting-into-a-nested-service-path">Rewriting into a nested service path</h2>
-<p>Take this further if your service exposes its own base path - for example <code>/accounts-service/v1/</code> - and you want all <code>/accounts</code> traffic to land there. Set <strong>Path</strong> to <code>/accounts-service/v1/</code> and <strong>Rewrite</strong> to <code>/accounts</code>.</p>
-<p>Now any gateway request under <code>/accounts</code> gets its <code>/accounts</code> prefix swapped for <code>/accounts-service/v1/</code>, with the rest of the URL preserved. So <code>/accounts/balance</code> on the gateway actually routes to <code>/accounts-service/v1/balance</code> on the service.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/path-routing-3.png" data-desc-position="bottom"><img alt="Connector panel with Path set to /accounts-service/v1/ and Rewrite set to /accounts" src="../assets/screenshots/path-routing-3.png"></a></p>
-<p><em><code>https://&lt;gateway&gt;/accounts/balance</code> routes to <code>/accounts-service/v1/balance</code> on the service.</em></p>
+<h1 id="deploying-an-application-with-cloud-sql">Deploying an Application with Cloud SQL</h1>
+<p>In this example, we have an application connected to a managed Postgres database running on Google Cloud SQL. Shoal provisions and manages the instance for you - there are no Google Cloud credentials to connect and no console to visit.</p>
+<p>Hit deploy, and it just works.</p>
+<h3 id="step-one">Step One</h3>
+<p>Drag a container node, a gateway node, and a Cloud SQL node onto the canvas, then link them together.</p>
+<ul>
+<li><strong>Container node</strong> - links to your source code, runs and scales your container, and holds app environment variables.</li>
+<li><strong>Gateway node</strong> - where you set your app's web address.</li>
+<li><strong>Cloud SQL node</strong> - sets up your managed Postgres database and provides the output values you map into your container.</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/cloudsql-deploy-01-graph-layout.png" data-desc-position="bottom"><img alt="Cloud SQL deployment graph" src="../assets/screenshots/cloudsql-deploy-01-graph-layout.png"></a></p>
+<h3 id="step-two">Step Two</h3>
+<p>Click the gateway node to open it, expand the <strong>Domain</strong> section, and enter the URL name you want. For example, entering <code>shopping-test</code> will make your app available at <code>shopping-test.eu1.shoal.live</code>. You can also point a <a href="../faq-custom-domain/">custom domain</a> at this address.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/cloudsql-deploy-02-gateway-config.png" data-desc-position="bottom"><img alt="Cloud SQL gateway config" src="../assets/screenshots/cloudsql-deploy-02-gateway-config.png"></a></p>
+<h3 id="step-three">Step Three</h3>
+<p>Click the container node to open it, expand the <strong>Source</strong> section, and set up your source - either a GitHub repo or a file upload. If your project includes a Dockerfile, Shoal builds from it; otherwise Shoal auto-detects your stack and builds it for you.</p>
+<h3 id="step-four">Step Four</h3>
+<p>Click the Cloud SQL node to open it and fill in its settings:</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Database name</strong></td>
+<td>The name of the database created on the instance</td>
+</tr>
+<tr>
+<td><strong>Postgres version</strong></td>
+<td>The version of Postgres the instance runs</td>
+</tr>
+<tr>
+<td><strong>Instance size</strong></td>
+<td>How much compute the database gets</td>
+</tr>
+<tr>
+<td><strong>Storage size</strong></td>
+<td>How much disk space the database gets</td>
+</tr>
+</tbody>
+</table>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/cloudsql-deploy-03-cloudsql-config.png" data-desc-position="bottom"><img alt="Cloud SQL node configuration" src="../assets/screenshots/cloudsql-deploy-03-cloudsql-config.png"></a></p>
+<h3 id="step-five">Step Five</h3>
+<p>Map the Cloud SQL outputs to your container environment variables. The node exposes:</p>
+<table>
+<thead>
+<tr>
+<th>Output</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>connection_string</code></td>
+<td>The full Postgres URL - usually mapped to <code>DATABASE_URL</code></td>
+</tr>
+<tr>
+<td><code>host</code></td>
+<td>Database host, if your app expects separate values</td>
+</tr>
+<tr>
+<td><code>port</code></td>
+<td>Database port</td>
+</tr>
+<tr>
+<td><code>username</code></td>
+<td>Database user</td>
+</tr>
+<tr>
+<td><code>password</code></td>
+<td>Database password</td>
+</tr>
+<tr>
+<td><code>database</code></td>
+<td>Database name</td>
+</tr>
+</tbody>
+</table>
+<p>You can manage environment variables from the container node's <strong>Env</strong> section, or from the environment settings page. See the <a href="../faq-env-vars/">environment variables guide</a> for more detail.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/cloudsql-deploy-04-output-mapping.png" data-desc-position="bottom"><img alt="Cloud SQL output mapping" src="../assets/screenshots/cloudsql-deploy-04-output-mapping.png"></a></p>
+<h3 id="step-six">Step Six</h3>
+<p>Press <strong>Deploy</strong>. You can watch the deployment in real time via the <strong>Observability</strong> menu, or by clicking the link on the deploy button.</p>
+<h3 id="done">Done</h3>
+<p>Your app is live at the address you configured - connected to a managed Cloud SQL Postgres database and running in a scalable, resilient, and protected environment.</p>
 
 
 
